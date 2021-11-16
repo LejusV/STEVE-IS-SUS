@@ -1,4 +1,3 @@
 # AMOGUS
-***
+**
 ambigus.
-***
