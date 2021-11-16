@@ -1,2 +1,2 @@
-# AMOGUS
+## AMOGUS
 ambigus.
