@@ -8,25 +8,25 @@
               "condition": "minecraft:entity_scores",
               "entity": "this",
               "scores": {
-                "download_stage": 2
+                "garbage_stage": 2
               }
             },
             {
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[todo_s_download]}"
+                "nbt": "{Tags:[todo_l_garbage]}"
               }
             }
           ],
           "entity": {
             "type": "minecraft:villager",
-            "nbt": "{Tags:[task_cafet_download]}"
+            "nbt": "{Tags:[task_cafet_garbage]}"
           }
         }
       }
     },
     "rewards": {
-      "function": "amogus:tasks/admin/download"
+      "function": "amogus:tasks/storage/garbage"
     }
   }
