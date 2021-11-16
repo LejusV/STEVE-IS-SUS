@@ -1,3 +1,3 @@
 # AMOGUS
-*** By #Lejus
+## By LejusVDP
 ambigus.
