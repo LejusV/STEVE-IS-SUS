@@ -135,6 +135,11 @@ execute if entity @a[tag=task_course] as @a[tag=task_course] run function amogus
 execute if entity @a[tag=task_manifolds] as @a[tag=task_manifolds] run function amogus:tasks/reactor/manifolds/tick
 # steering_task
 execute if entity @a[tag=task_steering] as @a[tag=task_steering] at @s anchored eyes rotated as @s run function amogus:tasks/navigation/steering/tick/particles/cursor
+
+
+execute as @a[tag=color_picked] run function amogus:tasks/weapon/asteroids/tick/main
+
+
 # TASKS #
 
 # MONITORING #
