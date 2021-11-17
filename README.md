@@ -9,7 +9,7 @@ ambigus.
 > - [GAME](./data/amogus/functions/game.mcfunction) *function*
 > - [DEATH](./data/amogus/functions/death.mcfunction) *function*
 > - [PARTICLES](./data/amogus/functions/particles.mcfunction) *function*
-> - [COLOR CHOICE ](./data/amogus/functions/color_pîck)
+> - [COLOR CHOICE ](./data/amogus/functions/color_pick)
 > - [IMPOSTOR ](./data/amogus/functions/impostor)
 > - [MEETING ](./data/amogus/functions/meeting)
 > - [START](./data/amogus/functions/start)
