@@ -1,1 +1,16 @@
-
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "entity": {
+            "type": "minecraft:villager",
+            "nbt": "{Tags:[click_villager_aqua]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "amogus:color_pick/aqua"
+    }
+  }
