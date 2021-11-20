@@ -3,7 +3,10 @@
 Minecraft Datapack to add the Among Us game in Minecraft,
 Project by **LejusVDP**, release on December 17th.  
 ambigus.  
-> [/FUNCTIONS](./data/amogus/functions) *function*
+> [**/ADVANCEMENTS**](./data/amogus/advancements)
+> - [/COLOR CHOICE](./data/amogus/advancements/colorpick)
+> - [/TASKS](./data/amogus/advancements/tasks)
+> [**/FUNCTIONS**](./data/amogus/functions)
 > - [load](./data/amogus/functions/load.mcfunction)  *function*
 > - [main tick](./data/amogus/functions/tick.mcfunction) *function*
 > - [game](./data/amogus/functions/game.mcfunction) *function*
