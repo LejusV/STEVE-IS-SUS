@@ -1,55 +1,27 @@
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^0.8 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^0.9 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.1 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.2 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.3 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.4 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.5 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.6 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.7 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.8 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^1.9 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.1 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.2 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.3 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.4 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.5 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.6 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.7 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.8 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^2.9 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.1 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.2 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.3 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.4 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.5 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.6 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.7 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.8 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^3.9 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.1 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.2 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.3 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.4 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.5 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.6 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.7 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.8 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^4.9 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.0 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.1 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.2 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.3 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.4 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.5 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.6 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.7 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.8 0 0 0 1000 1 normal @s
-execute as @s at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run particle minecraft:dust 0.7 0 0 0.2 ^ ^ ^5.9 0 0 0 1000 1 normal @s
+scoreboard players add @s[scores={asteroids=0..19}] meteor_loop 1
+execute if score @s meteor_loop matches 1 at @s rotated as @s anchored feet positioned ~8 ~0.9 ~5 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 29 at @s rotated as @s anchored feet positioned ~6 ~1.9 ~7 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 35 at @s rotated as @s anchored feet positioned ~8.5 ~2.8 ~ run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 58 at @s rotated as @s anchored feet positioned ~1.2 ~0.5 ~7 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 81 at @s rotated as @s anchored feet positioned ~4 ~1.2 ~8 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 129 at @s rotated as @s anchored feet positioned ~8.5 ~0.4 ~5.7 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 140 at @s rotated as @s anchored feet positioned ~8.1 ~3.1 ~3.5 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 163 at @s rotated as @s anchored feet positioned ~5.2 ~-0.2 ~5.6 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 190 at @s rotated as @s anchored feet positioned ~6.9 ~0.9 ~4.1 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 206 at @s rotated as @s anchored feet positioned ~6.1 ~2.4 ~-1.5 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 238 at @s rotated as @s anchored feet positioned ~6 ~1.3 ~6 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 269 at @s rotated as @s anchored feet positioned ~2 ~-0.2 ~8 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 293 at @s rotated as @s anchored feet positioned ~8 ~0.9 ~3 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 300 at @s rotated as @s anchored feet positioned ~8 ~0.9 ~-2 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 331 at @s rotated as @s anchored feet positioned ~5 ~0.9 ~2 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 347 at @s rotated as @s anchored feet positioned ~4 ~-0.5 ~7 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 378 at @s rotated as @s anchored feet positioned ~5 ~1.9 ~6 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 400 at @s rotated as @s anchored feet positioned ~3 ~1.2 ~7 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 420 at @s rotated as @s anchored feet positioned ~6 ~1.3 ~6 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 440 at @s rotated as @s anchored feet positioned ~6.9 ~0.9 ~4.1 run function amogus:tasks/weapon/asteroids/as_summon
+execute if score @s meteor_loop matches 440 run scoreboard players set @s meteor_loop 0
 
+execute as @e[tag=meteorite] at @s rotated 135 0 run tp @s ^ ^ ^0.03
+execute at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run function amogus:tasks/weapon/asteroids/tick/particles/laser
 execute at @s anchored feet rotated as @s positioned ~ ~1.5 ~ run function amogus:tasks/weapon/asteroids/tick/testloop
 execute if score @s asteroids matches 20.. run function amogus:tasks/weapon/asteroids/end

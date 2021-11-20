@@ -1,5 +1,12 @@
-scoreboard players add @s amogus_timer 1
-execute if block ~ ~ ~ air unless entity @e[tag=meteorite,distance=..0.25] unless score @s amogus_timer matches 24.. positioned ^ ^ ^0.25 run function amogus:tasks/weapon/asteroids/tick/testloop
-execute unless block ~ ~ ~ air run function amogus:tasks/weapon/asteroids/laser_on_block
-execute if score @s amogus_timer matches 24.. run scoreboard players set @s amogus_timer 0
-execute if entity @e[tag=meteorite,distance=..0.25] run function amogus:tasks/weapon/asteroids/hit
+execute if entity @s[team=aqua] run function amogus:tasks/weapon/asteroids/tick/aqua_testloop
+execute if entity @s[team=black] run function amogus:tasks/weapon/asteroids/tick/black_testloop
+execute if entity @s[team=blue] run function amogus:tasks/weapon/asteroids/tick/blue_testloop
+execute if entity @s[team=gray] run function amogus:tasks/weapon/asteroids/tick/gray_testloop
+execute if entity @s[team=green] run function amogus:tasks/weapon/asteroids/tick/green_testloop
+execute if entity @s[team=lime] run function amogus:tasks/weapon/asteroids/tick/lime_testloop
+execute if entity @s[team=orange] run function amogus:tasks/weapon/asteroids/tick/orange_testloop
+execute if entity @s[team=pink] run function amogus:tasks/weapon/asteroids/tick/pink_testloop
+execute if entity @s[team=purple] run function amogus:tasks/weapon/asteroids/tick/purple_testloop
+execute if entity @s[team=redsus] run function amogus:tasks/weapon/asteroids/tick/redsus_testloop
+execute if entity @s[team=white] run function amogus:tasks/weapon/asteroids/tick/white_testloop
+execute if entity @s[team=yellow] run function amogus:tasks/weapon/asteroids/tick/yellow_testloop
