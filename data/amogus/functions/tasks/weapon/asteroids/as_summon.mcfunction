@@ -1,0 +1,12 @@
+execute if entity @s[team=aqua] run summon armor_stand ~ ~ ~ {Tags:["meteorite","aqua_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=black] run summon armor_stand ~ ~ ~ {Tags:["meteorite","black_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=blue] run summon armor_stand ~ ~ ~ {Tags:["meteorite","blue_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=gray] run summon armor_stand ~ ~ ~ {Tags:["meteorite","gray_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=green] run summon armor_stand ~ ~ ~ {Tags:["meteorite","green_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=lime] run summon armor_stand ~ ~ ~ {Tags:["meteorite","lime_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=orange] run summon armor_stand ~ ~ ~ {Tags:["meteorite","orange_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=pink] run summon armor_stand ~ ~ ~ {Tags:["meteorite","pink_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=purple] run summon armor_stand ~ ~ ~ {Tags:["meteorite","purple_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=redsus] run summon armor_stand ~ ~ ~ {Tags:["meteorite","redsus_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=white] run summon armor_stand ~ ~ ~ {Tags:["meteorite","white_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
+execute if entity @s[team=yellow] run summon armor_stand ~ ~ ~ {Tags:["meteorite","yellow_aster"],NoGravity:1,Invisible:1,Invulnerable:1,Marker:1,Rotation:[135f]}
