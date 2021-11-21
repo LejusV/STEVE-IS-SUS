@@ -1,3 +1,4 @@
+effect give @s blindness 3 255 true
 particle minecraft:dust 0.5 0.5 0.5 1 32.0 103.95 3 0 0 2 0.0001 10 normal @s
 particle minecraft:dust 0.5 0.5 0.5 1 32.0 102.10 3 0 0 2 0.0001 10 normal @s
 particle minecraft:dust 0.5 0.5 0.5 1 81.0 103.95 3 0 0 2 0.0001 10 normal @s
