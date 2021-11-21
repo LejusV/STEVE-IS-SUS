@@ -121,6 +121,8 @@ scoreboard objectives remove manifol_temp
 scoreboard objectives remove steering_y_rota
 scoreboard objectives remove steering_z_rota
 
+scoreboard objectives remove garbage_stage
+
 scoreboard objectives add color_picked_nb dummy
 scoreboard objectives add amogus_settings dummy "SETTINGS"
 scoreboard objectives add amogus_timer dummy
@@ -186,6 +188,8 @@ scoreboard objectives add manifol dummy
 scoreboard objectives add manifol_temp dummy
 scoreboard objectives add steering_y_rota dummy
 scoreboard objectives add steering_z_rota dummy
+
+scoreboard objectives add garbage_stage dummy
 
 team remove aqua
 team remove black
