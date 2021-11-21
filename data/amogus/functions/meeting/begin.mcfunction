@@ -1,7 +1,11 @@
-tag @s add nomeetingleft
 tag @a[tag=color_picked,tag=crewmate] remove task_download
 tag @a[tag=color_picked,tag=crewmate] remove task_wires
 tag @a[tag=color_picked,tag=crewmate] remove task_garbage
+tag @a[tag=color_picked,tag=crewmate] remove task_steering
+tag @a[tag=color_picked,tag=crewmate] remove task_course
+tag @a[tag=color_picked,tag=crewmate] remove task_engine
+tag @a[tag=color_picked,tag=crewmate] remove task_manifolds
+
 
 tag @a[tag=color_picked] remove invent
 tag @a[tag=color_picked] remove invent_admin
