@@ -15,7 +15,7 @@
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[todo_l_garbage]}"
+                "nbt": "{Tags:[todo_l_garbage,todo_l_garbage2]}"
               }
             }
           ],
