@@ -1,3 +1,5 @@
+execute if entity @a[tag=task_steering] as @a[tag=task_steering] run effect give @s slowness 3 255 true
+execute if entity @a[tag=task_steering] as @a[tag=task_steering] run effect give @s blindness 3 255 true
 particle minecraft:dust 0.1 0.8 1 0.3 ^ ^ ^2.1 0 0 0 0.0001 1 normal @s
 particle minecraft:dust 1 1 1 0.3 ^ ^0.2 ^2.1 0 0 0 0.0001 1 normal @s
 particle minecraft:dust 1 1 1 0.3 ^ ^-0.2 ^2.1 0 0 0 0.0001 1 normal @s
