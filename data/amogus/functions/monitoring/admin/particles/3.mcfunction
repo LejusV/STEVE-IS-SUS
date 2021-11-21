@@ -1,4 +1,4 @@
-particle dust 0.918 0 1 0.3 ~ ~ ~ 0 0 0 0.0000001 1 normal @a[tag=check_admin]
+particle dust 0.918 0 1 0.3 ~ ~.015 ~ 0 0 0 0.0000001 1 normal @a[tag=check_admin]
 particle dust 0.918 0 1 0.3 ~ ~ ~.04 0 0 0 0.0000001 1 normal @a[tag=check_admin]
 particle dust 0.918 0 1 0.3 ~ ~.015 ~.08 0 0 0 0.0000001 1 normal @a[tag=check_admin]
 particle dust 0.918 0 1 0.3 ~ ~.04 ~.105 0 0 0 0.0000001 1 normal @a[tag=check_admin]
