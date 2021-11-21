@@ -12,6 +12,7 @@ ambigus.
 > - [load](./data/amogus/functions/load.mcfunction)  *function*
 > - [main tick](./data/amogus/functions/tick.mcfunction) *function*
 > - [game](./data/amogus/functions/game.mcfunction) *function*
+> - [impostor](./data/amogus/functions/impostor.mcfunction) *function*
 > - [death](./data/amogus/functions/death.mcfunction) *function*
 > - [/COLOR CHOICE](./data/amogus/functions/color_pick)
 > - [/IMPOSTOR](./data/amogus/functions/impostor)
