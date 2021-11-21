@@ -1,3 +1,5 @@
+effect give @s slowness 2 255 true
+effect give @s blindness 2 255 true
 function amogus:tasks/admin/wires/tick/trig_enab
 execute if entity @s[scores={wire_1=0,wire_2=0,wire_3=0,wire_4=0,wire_red=0,wire_blue=0,wire_yellow=0,wire_pink=0}] run function amogus:tasks/admin/wires/tick/tellraw0
 execute unless entity @s[scores={wire_1=0..1}] run scoreboard players set @s wire_1 0
