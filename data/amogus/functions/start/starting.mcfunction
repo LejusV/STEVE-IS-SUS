@@ -55,5 +55,9 @@ scoreboard players set @a[tag=color_picked,tag=impostor] sab_door_menu 0
 execute as @a[tag=todo_l_garbage] run scoreboard players set @s garbage 0
 execute as @a[tag=todo_l_engine] run scoreboard players set @s engine_stage 1
 execute as @a[tag=todo_s_shields] run scoreboard players set @s shields_pattern 0
+execute as @a[tag=todo_l_garbage1] run scoreboard players set @s garbage_stage 2
+execute as @a[tag=todo_l_garbage2] run scoreboard players set @s garbage_stage 3
+tag @a[tag=todo_l_garbage1] add todo_l_garbage
+tag @a[tag=todo_l_garbage2] add todo_l_garbage
 
 execute if entity @a[tag=color_picked,tag=!crewmate,tag=!impostor,gamemode=adventure] run function amogus:start/start_error
