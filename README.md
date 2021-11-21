@@ -1,7 +1,7 @@
 # AMOGUS
 
 Minecraft Datapack to add the Among Us game in Minecraft,
-Project by **LejusVDP**, release on December 17th.  
+Project by **LejusVDP**, release 1.0.01 on December 17th.  
 ambigus.  
 > [**/ADVANCEMENTS**](./data/amogus/advancements)  
 > - [/COLOR CHOICE](./data/amogus/advancements/colorpick)  
