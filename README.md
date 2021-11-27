@@ -19,8 +19,4 @@ ambigus.
 > - [/MONITORING](./data/amogus/functions/monitoring)
 > - [/START](./data/amogus/functions/start)
 > - [/TASKS](./data/amogus/functions/tasks)
-<<<<<<< Updated upstream
 > > - [/ADMIN](./data/amogus/functions/tasks/admin)
-=======
-> > - [/ADMIN](./data/amogus/functions/tasks/admin)
->>>>>>> Stashed changes
