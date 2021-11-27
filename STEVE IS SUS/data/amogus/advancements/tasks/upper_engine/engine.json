@@ -1,0 +1,39 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "engine_stage": {
+                  "min": 1,
+                  "max": 2
+                }
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[todo_l_engine]}"
+              }
+            }
+          ],
+          "entity": {
+            "type": "minecraft:villager",
+            "nbt": "{Tags:[task_engine]}",
+            "location": {
+              "dimension": "minecraft:overworld"
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "amogus:tasks/upper_engine/engine"
+    }
+  }
+  

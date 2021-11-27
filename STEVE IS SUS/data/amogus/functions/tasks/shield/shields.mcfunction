@@ -1,0 +1,2 @@
+advancement revoke @s only amogus:tasks/shield/shields
+scoreboard players operation @s shields_pattern = @e[tag=shields_pattern,type=armor_stand,limit=1,sort=random,scores={shields_pattern=1..}] shields_pattern

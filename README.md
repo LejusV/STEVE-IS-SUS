@@ -7,7 +7,6 @@ ambigus.
 > - [/COLOR CHOICE](./data/amogus/advancements/colorpick)  
 > - [/TASKS](./data/amogus/advancements/tasks)  
 
-
 > [**/FUNCTIONS**](./data/amogus/functions)  
 > - [load](./data/amogus/functions/load.mcfunction)  *function*
 > - [main tick](./data/amogus/functions/tick.mcfunction) *function*
@@ -20,4 +19,8 @@ ambigus.
 > - [/MONITORING](./data/amogus/functions/monitoring)
 > - [/START](./data/amogus/functions/start)
 > - [/TASKS](./data/amogus/functions/tasks)
+<<<<<<< Updated upstream
 > > - [/ADMIN](./data/amogus/functions/tasks/admin)
+=======
+> > - [/ADMIN](./data/amogus/functions/tasks/admin)
+>>>>>>> Stashed changes

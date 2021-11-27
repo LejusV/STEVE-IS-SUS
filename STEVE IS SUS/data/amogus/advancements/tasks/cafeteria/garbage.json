@@ -1,0 +1,32 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "player": [
+            {
+              "condition": "minecraft:entity_scores",
+              "entity": "this",
+              "scores": {
+                "garbage_stage": 2
+              }
+            },
+            {
+              "condition": "minecraft:entity_properties",
+              "entity": "this",
+              "predicate": {
+                "nbt": "{Tags:[todo_l_garbage,todo_l_garbage1]}"
+              }
+            }
+          ],
+          "entity": {
+            "type": "minecraft:villager",
+            "nbt": "{Tags:[task_cafet_garbage]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "amogus:tasks/storage/garbage"
+    }
+  }

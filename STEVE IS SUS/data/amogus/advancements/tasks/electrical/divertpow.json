@@ -1,0 +1,19 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_interacted_with_entity",
+        "conditions": {
+          "player": {
+            "nbt": "{Tags:[todo_s_divertpow]}"
+          },
+          "entity": {
+            "type": "minecraft:villager",
+            "nbt": "{Tags:[task_elec_divertpow]}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "amogus:tasks/electrical/divert_power"
+    }
+  }
