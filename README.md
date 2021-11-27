@@ -20,3 +20,4 @@ ambigus.
 > - [/MONITORING](./data/amogus/functions/monitoring)
 > - [/START](./data/amogus/functions/start)
 > - [/TASKS](./data/amogus/functions/tasks)
+> > - [/ADMIN](./data/amogus/functions/tasks/admin)
