@@ -22,6 +22,7 @@ execute if score @s meteor_loop matches 420 at @s rotated as @s anchored feet po
 execute if score @s meteor_loop matches 440 at @s rotated as @s anchored feet positioned ~6.9 ~0.9 ~4.1 run function amogus:tasks/weapon/asteroids/as_summon
 execute if score @s meteor_loop matches 440 run scoreboard players set @s meteor_loop 0
 execute as @e[tag=meteorite] at @s rotated 135 0 run tp @s ^ ^ ^0.03
+execute as @e[tag=meteorite] at @s rotated as @s run function amogus:tasks/weapon/asteroids/tick/particles/meteorite
 execute at @s anchored feet positioned ~ ~1.5 ~ rotated as @s run function amogus:tasks/weapon/asteroids/tick/particles/laser
 execute at @s anchored feet rotated as @s positioned ~ ~1.5 ~ run function amogus:tasks/weapon/asteroids/tick/testloop
 execute if score @s asteroids matches 20.. run function amogus:tasks/weapon/asteroids/end

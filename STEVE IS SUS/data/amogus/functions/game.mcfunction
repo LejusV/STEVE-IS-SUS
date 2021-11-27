@@ -130,6 +130,7 @@ execute if entity @a[tag=task_scan] as @a[tag=task_scan] run function amogus:tas
 execute if entity @a[tag=task_samples] as @a[tag=task_samples] run function amogus:tasks/medbay/samples/tick/main
 # samples_task
 execute if entity @a[tag=task_divertpow] as @a[tag=task_divertpow] run function amogus:tasks/electrical/divert_power/tick
+execute if entity @a[tag=anim_fuse] as @a[tag=anim_fuse] run function amogus:tasks/communication/divert_power/tick
 # TASKS #
 
 # MONITORING #

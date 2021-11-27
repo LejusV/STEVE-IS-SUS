@@ -60,6 +60,7 @@ execute as @a[tag=todo_l_garbage1] run scoreboard players set @s garbage_stage 2
 execute as @a[tag=todo_l_garbage2] run scoreboard players set @s garbage_stage 3
 execute as @a[tag=todo_l_garbage] run scoreboard players set @s garbage 0
 
-execute as @a[tag=todo_s_divertpow] run scoreboard players operation @s divertpowerto = @e[scores={short_task=1..8}] short_task
+execute as @a[tag=todo_s_divertpow] run scoreboard players operation @s divertpowerto = @e[scores={short_task=1..8},limit=1,sort=random] short_task
+execute as @a[tag=todo_s_divertpow] run scoreboard players add @s divertpowerto 10
 
 execute if entity @a[tag=color_picked,tag=!crewmate,tag=!impostor,gamemode=adventure] run function amogus:start/start_error
