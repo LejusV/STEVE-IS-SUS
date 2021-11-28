@@ -388,8 +388,10 @@ tag @a remove todo_s_download
 tag @a remove todo_l_reactor
 tag @a remove todo_l_engine
 tag @a remove todo_l_garbage
+tag @a remove todo_l_garbage1
+tag @a remove todo_l_garbage2
 tag @a remove todo_l_scan
-tag @a remove todo_l_sample
+tag @a remove todo_l_samples
 tag @a remove todo_l_fuel
 tag @a remove todo_c_cardswipe
 tag @a remove todo_c_wires

@@ -22,3 +22,4 @@ execute if entity @s[team=yellow] at @s anchored eyes as @e[tag=steer_target_set
 tp @e[tag=steer_target_set,limit=1,sort=nearest] 0 -5 0
 execute positioned 0 -5 0 run kill @e[tag=steer_target_set,limit=1,sort=nearest,distance=..1]
 tag @s add task_steering
+advancement revoke @s only amogus:tasks/navigation/steering

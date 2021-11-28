@@ -135,5 +135,7 @@ execute if entity @a[tag=anim_fuse] as @a[tag=anim_fuse] run function amogus:tas
 
 # MONITORING #
 # admin
+execute as @a[tag=color_picked] unless entity @a[x=41.00,y=101.5,z=59.00,dy=1,dz=4] run tag @s remove check_admin
+execute if entity @a[x=41.00,y=101.5,z=59.00,dy=1,dz=4] as @a[x=41.00,y=101.5,z=59.00,dy=1,dz=4] run tag @s add check_admin
 execute if entity @a[tag=check_admin] run function amogus:monitoring/admin/tick
 # MONITORING #
