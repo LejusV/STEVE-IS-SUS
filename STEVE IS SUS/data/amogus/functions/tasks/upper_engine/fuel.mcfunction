@@ -1,0 +1,1 @@
+advancement revoke @s only amogus:tasks/upper_engine/fuel

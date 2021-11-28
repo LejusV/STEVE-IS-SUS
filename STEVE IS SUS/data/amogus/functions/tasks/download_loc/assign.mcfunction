@@ -1,2 +1,1 @@
 scoreboard players operation @s download_stage = @e[type=armor_stand,tag=download_loc,limit=1,sort=random] download_stage
-tellraw @a ["",{"text":"download "},{"score":{"name":"LejusVDP","objective":"download_stage"}}]

@@ -24,7 +24,7 @@ execute if entity @s[team=blue] store result score @s engine_y run data get enti
 execute if entity @s[team=gray] store result score @s engine_y run data get entity @e[tag=gray_engine,type=minecraft:armor_stand,limit=1] Pos[1]
 execute if entity @s[team=green] store result score @s engine_y run data get entity @e[tag=green_engine,type=minecraft:armor_stand,limit=1] Pos[1]
 execute if entity @s[team=lime] store result score @s engine_y run data get entity @e[tag=lime_engine,type=minecraft:armor_stand,limit=1] Pos[1]
-execute if entity @s[team=orange] store result score @s engine_y run data get entity @e[tag=orang_engine,type=minecraft:armor_stand,limit=1] Pos[1]
+execute if entity @s[team=orange] store result score @s engine_y run data get entity @e[tag=orange_engine,type=minecraft:armor_stand,limit=1] Pos[1]
 execute if entity @s[team=pink] store result score @s engine_y run data get entity @e[tag=pink_engine,type=minecraft:armor_stand,limit=1] Pos[1]
 execute if entity @s[team=purple] store result score @s engine_y run data get entity @e[tag=purple_engine,type=minecraft:armor_stand,limit=1] Pos[1]
 execute if entity @s[team=redsus] store result score @s engine_y run data get entity @e[tag=redsus_engine,type=minecraft:armor_stand,limit=1] Pos[1]
