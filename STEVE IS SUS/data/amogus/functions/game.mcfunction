@@ -135,6 +135,8 @@ execute if entity @a[tag=anim_fuse] as @a[tag=anim_fuse] run function amogus:tas
 execute if entity @a[tag=task_refueling] as @a[tag=task_refueling] run function amogus:tasks/storage/fuel/tick
 execute if entity @a[tag=task_fuel1] as @a[tag=task_fuel1] run function amogus:tasks/upper_engine/fuel/tick/upeng
 execute if entity @a[tag=task_fuel2] as @a[tag=task_fuel2] run function amogus:tasks/upper_engine/fuel/tick/loweng
+# distributor_task
+execute if entity @a[tag=task_distributor] as @a[tag=task_distributor] run function amogus:tasks/electrical/distributor/tick/main
 # TASKS #
 
 # MONITORING #

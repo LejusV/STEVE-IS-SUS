@@ -1,0 +1,16 @@
+particle minecraft:dust 1 0.816 0 0.3 ~ ~-.14 ~-.14 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~-.185 ~-.0765 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~-.2 ~ 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~-.185 ~.0765 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~-.14 ~.14 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~-.0765 ~.185 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~ ~.2 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~.0765 ~.185 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~.14 ~.14 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~.185 ~.0765 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~.2 ~ 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~.185 ~-.0765 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~.14 ~-.14 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~.0765 ~-.185 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~ ~-.2 0 0 0 0.0001 1 normal @s
+particle minecraft:dust 1 0.816 0 0.3 ~ ~-.0765 ~-.185 0 0 0 0.0001 1 normal @s
