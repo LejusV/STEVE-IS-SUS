@@ -132,6 +132,8 @@ scoreboard objectives remove sample_sus
 scoreboard objectives remove divertpow
 scoreboard objectives remove divertpower
 
+scoreboard objectives remove fuel_stage
+
 scoreboard objectives add color_picked_nb dummy
 scoreboard objectives add amogus_settings dummy "SETTINGS"
 scoreboard objectives add amogus_timer dummy
@@ -208,6 +210,8 @@ scoreboard objectives add sample_sus dummy
 
 scoreboard objectives add divertpow trigger
 scoreboard objectives add divertpowerto dummy
+
+scoreboard objectives add fuel_stage dummy
 
 team remove aqua
 team remove black

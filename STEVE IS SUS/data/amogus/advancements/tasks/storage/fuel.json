@@ -5,26 +5,16 @@
         "conditions": {
           "player": [
             {
-              "condition": "minecraft:entity_scores",
-              "entity": "this",
-              "scores": {
-                "fuel_stage": {
-                  "min": 1,
-                  "max": 2
-                }
-              }
-            },
-            {
               "condition": "minecraft:entity_properties",
               "entity": "this",
               "predicate": {
-                "nbt": "{Tags:[task_fuel,todo_l_fuel]}"
+                "nbt": "{Tags:[todo_l_fuel,task_refuel]}"
               }
             }
           ],
           "entity": {
             "type": "minecraft:villager",
-            "nbt": "{Tags:[task_fuel]}",
+            "nbt": "{Tags:[task_storage_fuel]}",
             "location": {
               "dimension": "minecraft:overworld"
             }
@@ -33,7 +23,6 @@
       }
     },
     "rewards": {
-      "function": "amogus:tasks/upper_engine/fuel"
+      "function": "amogus:tasks/storage/fuel"
     }
   }
-  
