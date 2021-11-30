@@ -136,6 +136,16 @@ scoreboard objectives remove fuel_stage
 
 scoreboard objectives remove distrib_loop
 
+scoreboard objectives remove simon
+scoreboard objectives remove simon1
+scoreboard objectives remove simon2
+scoreboard objectives remove simon3
+scoreboard objectives remove simon4
+scoreboard objectives remove simon5
+scoreboard objectives remove simon_stage
+scoreboard objectives remove simon_input
+scoreboard objectives remove simon_loop
+
 scoreboard objectives add color_picked_nb dummy
 scoreboard objectives add amogus_settings dummy "SETTINGS"
 scoreboard objectives add amogus_timer dummy
@@ -216,6 +226,16 @@ scoreboard objectives add divertpowerto dummy
 scoreboard objectives add fuel_stage dummy
 
 scoreboard objectives add distrib_loop dummy
+
+scoreboard objectives add simon dummy
+scoreboard objectives add simon1 dummy
+scoreboard objectives add simon2 dummy
+scoreboard objectives add simon3 dummy
+scoreboard objectives add simon4 dummy
+scoreboard objectives add simon5 dummy
+scoreboard objectives add simon_stage dummy
+scoreboard objectives add simon_input dummy
+scoreboard objectives add simon_loop dummy
 
 team remove aqua
 team remove black
@@ -342,6 +362,16 @@ scoreboard players set @e[name="☆─"] wire 4
 
 scoreboard players set @e[scores={manifol=1..10}] manifol_click 0
 scoreboard players set @a[scores={manifol=1..10}] manifol 0
+
+scoreboard players set @e[tag=simon_1] simon 1
+scoreboard players set @e[tag=simon_2] simon 2
+scoreboard players set @e[tag=simon_3] simon 3
+scoreboard players set @e[tag=simon_4] simon 4
+scoreboard players set @e[tag=simon_5] simon 5
+scoreboard players set @e[tag=simon_6] simon 6
+scoreboard players set @e[tag=simon_7] simon 7
+scoreboard players set @e[tag=simon_8] simon 8
+scoreboard players set @e[tag=simon_9] simon 9
 
 tag @a remove color_picked
 tag @a remove impostor

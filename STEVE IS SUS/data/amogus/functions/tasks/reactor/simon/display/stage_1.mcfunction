@@ -1,0 +1,9 @@
+execute if score @s simon1 matches 1 at @e[tag=simon_1,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
+execute if score @s simon1 matches 2 at @e[tag=simon_2,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
+execute if score @s simon1 matches 3 at @e[tag=simon_3,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
+execute if score @s simon1 matches 4 at @e[tag=simon_4,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
+execute if score @s simon1 matches 5 at @e[tag=simon_5,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
+execute if score @s simon1 matches 6 at @e[tag=simon_6,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
+execute if score @s simon1 matches 7 at @e[tag=simon_7,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
+execute if score @s simon1 matches 8 at @e[tag=simon_8,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
+execute if score @s simon1 matches 9 at @e[tag=simon_9,type=armor_stand] run function amogus:tasks/reactor/simon/tick/particles/display_cell
