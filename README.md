@@ -8,11 +8,11 @@ ambigus.
 > - [/TASKS](./data/amogus/advancements/tasks)  
 
 > [**/FUNCTIONS**](./data/amogus/functions)  
-> - [load](./data/amogus/functions/load.mcfunction)  *function*
-> - [main tick](./data/amogus/functions/tick.mcfunction) *function*
-> - [game](./data/amogus/functions/game.mcfunction) *function*
-> - [impostor](./data/amogus/functions/impostor.mcfunction) *function*
-> - [death](./data/amogus/functions/death.mcfunction) *function*
+> - [*load*](./data/amogus/functions/load.mcfunction)  *function*
+> - [*main tick*](./data/amogus/functions/tick.mcfunction) *function*
+> - [*game*](./data/amogus/functions/game.mcfunction) *function*
+> - [*impostor*](./data/amogus/functions/impostor.mcfunction) *function*
+> - [*death*](./data/amogus/functions/death.mcfunction) *function*
 > - [COLOR CHOICE](./data/amogus/functions/color_pick)
 > - [IMPOSTOR](./data/amogus/functions/impostor)
 > - [MEETING](./data/amogus/functions/meeting)
@@ -33,7 +33,7 @@ ambigus.
 >   - [storage](./data/amogus/functions/tasks/storage)
 >   - [upper engine](./data/amogus/functions/tasks/upper_engine)
 >   - [weapon](./data/amogus/functions/tasks/weapon)
->   - [download location assignement](./data/amogus/functions/tasks/downlad_loc/assign.mcfunction) *function*
->   - [wires location assignement](./data/amogus/functions/tasks/wires_loc/assign.mcfunction) *function*
->   - [task success](./data/amogus/functions/tasks/end.mcfunction) *function*
->   - [task failure](./data/amogus/functions/tasks/fail.mcfunction) *function*
+>   - [*download location assignement*](./data/amogus/functions/tasks/downlad_loc/assign.mcfunction) *function*
+>   - [*wires location assignement*](./data/amogus/functions/tasks/wires_loc/assign.mcfunction) *function*
+>   - [*task success*](./data/amogus/functions/tasks/end.mcfunction) *function*
+>   - [*task failure*](./data/amogus/functions/tasks/fail.mcfunction) *function*
