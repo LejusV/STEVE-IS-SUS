@@ -33,7 +33,7 @@ ambigus.
 >   - [storage](./data/amogus/functions/tasks/storage)
 >   - [upper engine](./data/amogus/functions/tasks/upper_engine)
 >   - [weapon](./data/amogus/functions/tasks/weapon)
->   - [*download location assignement*](./data/amogus/functions/tasks/downlad_loc/assign.mcfunction) *function*
+>   - [*download location assignement*](./data/amogus/functions/tasks/download_loc/assign.mcfunction) *function*
 >   - [*wires location assignement*](./data/amogus/functions/tasks/wires_loc/assign.mcfunction) *function*
 >   - [*task success*](./data/amogus/functions/tasks/end.mcfunction) *function*
 >   - [*task failure*](./data/amogus/functions/tasks/fail.mcfunction) *function*
