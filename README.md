@@ -27,7 +27,7 @@ ambigus.
 >   - [communication](./data/amogus/functions/tasks/communication)
 >   - [electrical](./data/amogus/functions/tasks/electrical)
 >   - [medbay](./data/amogus/functions/tasks/medbay)
->   - [communication](./data/amogus/functions/tasks/navigation)
+>   - [navigation](./data/amogus/functions/tasks/navigation)
 >   - [reactor](./data/amogus/functions/tasks/reactor)
 >   - [shield](./data/amogus/functions/tasks/shield)
 >   - [storage](./data/amogus/functions/tasks/storage)
