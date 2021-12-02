@@ -25,6 +25,17 @@ execute if entity @a[gamemode=adventure,tag=!impostor] run attribute @a[gamemode
 attribute @a[gamemode=adventure,limit=1,sort=random] minecraft:generic.movement_speed base set 0.1
 execute if entity @a[gamemode=adventure,tag=!impostor] run effect give @a[gamemode=adventure,tag=!impostor] jump_boost 1 250 true
 execute if entity @a[tag=dead] run effect give @a[tag=dead] invisibility 3 1 true
+execute if entity @a[tag=check_admin] run effect give @a[tag=check_admin] blindness 2 255 true
+execute if entity @a[tag=task_simon] run effect give @a[tag=task_simon] slowness 2 255 true
+execute if entity @a[tag=task_simon] run effect give @a[tag=task_simon] blindness 2 255 true
+execute if entity @a[tag=task_scan] run effect give @a[tag=task_scan] blindness 2 255 true
+execute if entity @a[tag=task_asteroids] run effect give @a[tag=task_asteroids] blindness 2 255 true
+execute if entity @a[tag=task_divertpow] run effect give @a[tag=task_divertpow] slowness 2 255 true
+execute if entity @a[tag=task_divertpow] run effect give @a[tag=task_divertpow] blindness 2 255 true
+execute if entity @a[tag=task_distributor] run effect give @a[tag=task_distributor] slowness 2 255 true
+execute if entity @a[tag=task_distributor] run effect give @a[tag=task_distributor] blindness 2 255 true
+execute if entity @a[tag=anim_fuse] run effect give @a[tag=anim_fuse] slowness 2 255 true
+execute if entity @a[tag=anim_fuse] run effect give @a[tag=anim_fuse] blindness 2 255 true
 # ATTRIBUTES #
 
 # COLORS #
@@ -139,6 +150,8 @@ execute if entity @a[tag=task_fuel2] as @a[tag=task_fuel2] run function amogus:t
 execute if entity @a[tag=task_distributor] as @a[tag=task_distributor] run function amogus:tasks/electrical/distributor/tick/main
 # reactor_task / simon
 execute if entity @a[tag=task_simon] as @a[tag=task_simon] run function amogus:tasks/reactor/simon/tick/main
+# cardswipe_task
+execute if entity @a[tag=task_cardswipe] as @a[tag=task_cardswipe] run function amogus:tasks/admin/cardswipe/tick/main
 # TASKS #
 
 # MONITORING #

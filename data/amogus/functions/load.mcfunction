@@ -146,6 +146,8 @@ scoreboard objectives remove simon_stage
 scoreboard objectives remove simon_input
 scoreboard objectives remove simon_loop
 
+scoreboard objectives remove card_loop
+
 scoreboard objectives add color_picked_nb dummy
 scoreboard objectives add amogus_settings dummy "SETTINGS"
 scoreboard objectives add amogus_timer dummy
@@ -236,6 +238,11 @@ scoreboard objectives add simon5 dummy
 scoreboard objectives add simon_stage dummy
 scoreboard objectives add simon_input dummy
 scoreboard objectives add simon_loop dummy
+
+scoreboard objectives add card_loop dummy
+scoreboard objectives add card_2 dummy
+scoreboard objectives add card_3 dummy
+scoreboard objectives add card_4 dummy
 
 team remove aqua
 team remove black
