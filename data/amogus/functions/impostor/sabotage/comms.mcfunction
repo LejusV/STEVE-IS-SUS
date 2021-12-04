@@ -1,2 +1,2 @@
-execute if score sabotage_cd_sec amogus_timer matches 0 run say "Comms pas encore faites"
+execute if score sabotage_cd_sec amogus_timer matches 0 if block 4 101 26 red_wool if block 12 101 19 red_wool if block 8 101 19 red_wool if block 7 101 32 red_wool if blocks 5 101 -13 17 101 -13 5 98 -13 masked run setblock 7 101 32 redstone_block
 scoreboard players set @s sab_comms 0

@@ -1,5 +1,5 @@
 scoreboard players add @s amogus_timer 1
-execute at @e[tag=buttons] run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0.075 1 5
+execute at @e[tag=buttons] run particle dust 1 1 1 0.5 ~ ~ ~ 0 0 0.075 1 5 normal @s
 execute at @e[tag=ring_1] run function amogus:tasks/electrical/distributor/tick/particles/ring_1
 execute at @e[tag=ring_2] run function amogus:tasks/electrical/distributor/tick/particles/ring_2
 execute at @e[tag=ring_3] run function amogus:tasks/electrical/distributor/tick/particles/ring_3

@@ -12,4 +12,4 @@ execute if entity @s[team=redsus] at @s anchored eyes rotated as @s run function
 execute if entity @s[team=white] at @s anchored eyes rotated as @s run function amogus:tasks/o2/filter/tick/white
 execute if entity @s[team=yellow] at @s anchored eyes rotated as @s run function amogus:tasks/o2/filter/tick/yellow
 execute as @e[type=villager,tag=leaf,x=60.3,y=98.0,z=56.7,dx=0,dy=5,dz=0] at @s run tp @s ~ ~ ~-0.075
-execute at @e[tag=leaf] positioned ~ ~0.2 ~ run function amogus:tasks/o2/filter/tick/particles/leaf
+execute at @e[tag=leaf] positioned ~ ~ ~ run function amogus:tasks/o2/filter/tick/particles/leaf

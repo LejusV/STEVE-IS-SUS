@@ -6,6 +6,7 @@ scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=
 scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=notinmeeting] sab_lights
 scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=notinmeeting] sab_reactor
 scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=notinmeeting] sab_o2
+scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=notinmeeting] sab_comms
 scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=notinmeeting] sab_door_menu
 scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=notinmeeting] sab_door_loweng
 scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=notinmeeting] sab_door_upeng

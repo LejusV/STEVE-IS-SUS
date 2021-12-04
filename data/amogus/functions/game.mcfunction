@@ -25,6 +25,10 @@ execute if entity @a[gamemode=adventure,tag=!impostor] run attribute @a[gamemode
 attribute @a[gamemode=adventure,limit=1,sort=random] minecraft:generic.movement_speed base set 0.1
 execute if entity @a[gamemode=adventure,tag=!impostor] run effect give @a[gamemode=adventure,tag=!impostor] jump_boost 1 250 true
 execute if entity @a[tag=dead] run effect give @a[tag=dead] invisibility 3 1 true
+execute if entity @a[tag=task_manifolds] run effect give @a[tag=task_manifolds] blindness 2 255 true
+execute if entity @a[tag=task_manifolds] run effect give @a[tag=task_manifolds] slowness 2 255 true
+execute if entity @a[tag=task_course] run effect give @a[tag=task_course] blindness 2 255 true
+execute if entity @a[tag=task_course] run effect give @a[tag=task_course] slowness 2 255 true
 execute if entity @a[tag=check_admin] run effect give @a[tag=check_admin] blindness 2 255 true
 execute if entity @a[tag=task_simon] run effect give @a[tag=task_simon] slowness 2 255 true
 execute if entity @a[tag=task_simon] run effect give @a[tag=task_simon] blindness 2 255 true
@@ -159,6 +163,6 @@ execute if entity @a[tag=task_filter] as @a[tag=task_filter] run function amogus
 # MONITORING #
 # admin
 execute if entity @a[tag=check_admin] as @a[tag=check_admin] unless entity @s[x=41.00,y=101.5,z=59.00,dy=1,dz=4] run tag @s remove check_admin
-execute if entity @a[x=41.00,y=101.5,z=59.00,dy=1,dz=3] as @a[x=41.00,y=101.5,z=59.00,dy=1,dz=3] run tag @s add check_admin
+execute if block 7 101 32 red_wool if entity @a[x=41.00,y=101.5,z=59.00,dy=1,dz=3] as @a[x=41.00,y=101.5,z=59.00,dy=1,dz=3] run tag @s add check_admin
 execute if entity @a[tag=check_admin] run function amogus:monitoring/admin/tick
 # MONITORING #

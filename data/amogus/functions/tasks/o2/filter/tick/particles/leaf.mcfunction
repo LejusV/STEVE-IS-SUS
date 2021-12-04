@@ -1,1 +1,13 @@
-particle dust 0.361 0.133 0.039 0.5 ~ ~ ~ 0 0 0 1 1 normal @s
+particle dust 0.506 0.192 0.059 0.5 ~ ~.1 ~ 0 0 0 1 1 normal @s
+particle dust 0.506 0.192 0.059 0.5 ~.035 ~.13 ~-0.08 0 0 0 1 1 normal @s
+particle dust 0.506 0.192 0.059 0.5 ~-.035 ~.13 ~-0.08 0 0 0 1 1 normal @s
+particle dust 0.506 0.192 0.059 0.5 ~ ~.16 ~-.16 0 0 0 1 1 normal @s
+particle dust 0.506 0.192 0.059 0.5 ~0.05 ~.15 ~-.16 0 0 0 1 1 normal @s
+particle dust 0.506 0.192 0.059 0.5 ~-0.07 ~.15 ~-.16 0 0 0 1 1 normal @s
+particle dust 0.506 0.192 0.059 0.5 ~-0.08 ~.12 ~-.19 0 0 0 1 1 normal @s
+particle dust 0.361 0.133 0.039 0.3 ~-0.03 ~.17 ~-.24 0 0 0 1 1 normal @s
+particle dust 0.361 0.133 0.039 0.3 ~-0.05 ~.18 ~-.28 0 0 0 1 1 normal @s
+particle dust 0.361 0.133 0.039 0.3 ~-0.08 ~.19 ~-.31 0 0 0 1 1 normal @s
+particle dust 0.340 0.123 0.035 0.3 ~ ~.18 ~-0.08 0 0 0 1 1 normal @s
+particle dust 0.340 0.123 0.035 0.3 ~-.02 ~.18 ~-0.12 0 0 0 1 1 normal @s
+particle dust 0.340 0.123 0.035 0.3 ~ ~.19 ~-0.16 0 0 0 1 1 normal @s
