@@ -148,6 +148,9 @@ scoreboard objectives remove simon_loop
 
 scoreboard objectives remove card_loop
 
+scoreboard objectives remove filter_count
+scoreboard objectives remove filtered
+
 scoreboard objectives add color_picked_nb dummy
 scoreboard objectives add amogus_settings dummy "SETTINGS"
 scoreboard objectives add amogus_timer dummy
@@ -243,6 +246,9 @@ scoreboard objectives add card_loop dummy
 scoreboard objectives add card_2 dummy
 scoreboard objectives add card_3 dummy
 scoreboard objectives add card_4 dummy
+
+scoreboard objectives add filter_count dummy
+scoreboard objectives add filtered dummy
 
 team remove aqua
 team remove black
@@ -571,17 +577,29 @@ team modify purple nametagVisibility never
 team modify redsus nametagVisibility never
 team modify white nametagVisibility never
 team modify yellow nametagVisibility never
-team modify aqua collisionRule never
-team modify black collisionRule never
-team modify blue collisionRule never
-team modify green collisionRule never
-team modify gray collisionRule never
-team modify lime collisionRule never
-team modify orange collisionRule never
-team modify pink collisionRule never
-team modify purple collisionRule never
-team modify redsus collisionRule never
-team modify white collisionRule never
-team modify yellow collisionRule never
+team modify aqua collisionRule pushOtherTeams
+team modify black collisionRule pushOtherTeams
+team modify blue collisionRule pushOtherTeams
+team modify green collisionRule pushOtherTeams
+team modify gray collisionRule pushOtherTeams
+team modify lime collisionRule pushOtherTeams
+team modify orange collisionRule pushOtherTeams
+team modify pink collisionRule pushOtherTeams
+team modify purple collisionRule pushOtherTeams
+team modify redsus collisionRule pushOtherTeams
+team modify white collisionRule pushOtherTeams
+team modify yellow collisionRule pushOtherTeams
 team modify IA collisionRule never
+team modify redsus seeFriendlyInvisibles false
+team modify orange seeFriendlyInvisibles false
+team modify yellow seeFriendlyInvisibles false
+team modify blue seeFriendlyInvisibles false
+team modify aqua seeFriendlyInvisibles false
+team modify green seeFriendlyInvisibles false
+team modify lime seeFriendlyInvisibles false
+team modify black seeFriendlyInvisibles false
+team modify white seeFriendlyInvisibles false
+team modify pink seeFriendlyInvisibles false
+team modify purple seeFriendlyInvisibles false
+team modify gray seeFriendlyInvisibles false
 team join IA @e[type=villager]

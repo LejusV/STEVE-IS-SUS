@@ -152,11 +152,13 @@ execute if entity @a[tag=task_distributor] as @a[tag=task_distributor] run funct
 execute if entity @a[tag=task_simon] as @a[tag=task_simon] run function amogus:tasks/reactor/simon/tick/main
 # cardswipe_task
 execute if entity @a[tag=task_cardswipe] as @a[tag=task_cardswipe] run function amogus:tasks/admin/cardswipe/tick/main
+# O2filter_task
+execute if entity @a[tag=task_filter] as @a[tag=task_filter] run function amogus:tasks/o2/filter/tick/main
 # TASKS #
 
 # MONITORING #
 # admin
-execute as @a[tag=color_picked] unless entity @a[x=41.00,y=101.5,z=59.00,dy=1,dz=4] run tag @s remove check_admin
-execute if entity @a[x=41.00,y=101.5,z=59.00,dy=1,dz=4] as @a[x=41.00,y=101.5,z=59.00,dy=1,dz=4] run tag @s add check_admin
+execute if entity @a[tag=check_admin] as @a[tag=check_admin] unless entity @s[x=41.00,y=101.5,z=59.00,dy=1,dz=4] run tag @s remove check_admin
+execute if entity @a[x=41.00,y=101.5,z=59.00,dy=1,dz=3] as @a[x=41.00,y=101.5,z=59.00,dy=1,dz=3] run tag @s add check_admin
 execute if entity @a[tag=check_admin] run function amogus:monitoring/admin/tick
 # MONITORING #

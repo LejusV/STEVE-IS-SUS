@@ -9,4 +9,4 @@ execute if entity @e[scores={admin_data=8}] at @e[scores={admin_data=8}] run fun
 execute if entity @e[scores={admin_data=9}] at @e[scores={admin_data=9}] run function amogus:monitoring/admin/particles/9
 execute if entity @e[scores={admin_data=10}] at @e[scores={admin_data=10}] positioned ~ ~ ~-.1 run function amogus:monitoring/admin/particles/1
 execute if entity @e[scores={admin_data=10}] at @e[scores={admin_data=10}] positioned ~ ~ ~.2 run function amogus:monitoring/admin/particles/0
-execute if entity @e[tag=admin_table] as @e[tag=admin_table] at @s run function amogus:monitoring/admin/particles/walls
+# execute if entity @e[tag=admin_table] as @e[tag=admin_table] at @s run function amogus:monitoring/admin/particles/walls

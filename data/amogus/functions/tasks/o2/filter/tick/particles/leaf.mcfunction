@@ -1,0 +1,1 @@
+particle dust 0.361 0.133 0.039 0.5 ~ ~ ~ 0 0 0 1 1 normal @s
