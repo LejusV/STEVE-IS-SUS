@@ -1,4 +1,6 @@
 tellraw @a {"text": "§8§l > §6§lAMOGUS §8§l< §7Datapack (re)loaded !"}
+tp @a 56.5 27.00 88.5 0 90
+gamemode adventure @a[name=!LejusVDP,tag=!developer]
 advancement revoke @a only amogus:colorpick/aqua
 advancement revoke @a only amogus:colorpick/black
 advancement revoke @a only amogus:colorpick/blue
@@ -417,6 +419,7 @@ scoreboard players set @e[tag=simon_8] simon 8
 scoreboard players set @e[tag=simon_9] simon 9
 
 tag @a remove color_picked
+tag @a remove ingame
 tag @a remove impostor
 tag @a remove crewmate
 tag @a remove sus1
@@ -689,3 +692,15 @@ summon minecraft:villager 57.0 27.0 107.0 {Tags:[click_villager_yellow,click_vil
 
 # o2_air_vent
 execute positioned 60.5 101.00 57.5 run function amogus:structures/as_o2_airvent
+fill 46 27 79 46 28 76 minecraft:air
+fill 49 27 76 52 28 76 minecraft:air
+fill 55 27 76 58 28 76 minecraft:air
+fill 61 27 76 64 28 76 minecraft:air
+fill 68 27 79 68 28 82 minecraft:air
+fill 68 27 85 68 28 88 minecraft:air  
+fill 68 27 91 68 28 94 minecraft:air
+fill 68 27 97 68 28 100 minecraft:air
+fill 68 27 103 67 28 103 minecraft:air
+fill 67 27 104 67 28 103 minecraft:air
+fill 64 27 105 61 28 105 minecraft:air
+fill 58 27 105 55 28 105 minecraft:air

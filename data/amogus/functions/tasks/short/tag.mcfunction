@@ -18,3 +18,4 @@ execute as @a[scores={short_task=..8}] run scoreboard players set @s short_task 
 execute as @a[scores={short_task=9},tag=todo_s_download] run function amogus:tasks/short/assign
 tag @a[scores={short_task=9},tag=!todo_s_download] add todo_s_download
 scoreboard players set @a short_task 0
+scoreboard players add @a[tag=crewmate] tasks_left 1

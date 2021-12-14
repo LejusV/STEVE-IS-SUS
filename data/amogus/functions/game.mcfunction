@@ -23,11 +23,11 @@ execute positioned 50 101 38 run particle minecraft:dust_color_transition 0.6 0.
 # MAP ADJUSTMENTS #
 
 # ATTRIBUTES #
-attribute @a[gamemode=adventure,limit=1,sort=random] minecraft:generic.max_health base set 10
-execute if entity @a[gamemode=adventure,tag=!impostor] run attribute @a[gamemode=adventure,tag=!impostor,limit=1,sort=random] minecraft:generic.attack_damage base set 0
-attribute @a[gamemode=adventure,limit=1,sort=random] minecraft:generic.movement_speed base set 0.1
-execute if entity @a[gamemode=adventure,tag=!impostor] run effect give @a[gamemode=adventure,tag=!impostor] jump_boost 1 250 true
-execute if entity @a[tag=dead] run effect give @a[tag=dead] invisibility 3 1 true
+attribute @a[tag=ingame,gamemode=adventure,limit=1,sort=random] minecraft:generic.max_health base set 10
+execute if entity @a[tag=ingame,gamemode=adventure,tag=!impostor] run attribute @a[tag=ingame,gamemode=adventure,tag=!impostor,limit=1,sort=random] minecraft:generic.attack_damage base set 0
+attribute @a[tag=ingame,gamemode=adventure,limit=1,sort=random] minecraft:generic.movement_speed base set 0.1
+execute if entity @a[tag=ingame,gamemode=adventure,tag=!impostor] run effect give @a[gamemode=adventure,tag=!impostor] jump_boost 1 250 true
+execute if entity @a[tag=ingame,tag=dead] run effect give @a[tag=ingame,tag=dead] invisibility 3 1 true
 execute if entity @a[tag=task_manifolds] run effect give @a[tag=task_manifolds] blindness 2 255 true
 execute if entity @a[tag=task_manifolds] run effect give @a[tag=task_manifolds] slowness 2 255 true
 execute if entity @a[tag=task_course] run effect give @a[tag=task_course] blindness 2 255 true
@@ -45,44 +45,6 @@ execute if entity @a[tag=anim_fuse] run effect give @a[tag=anim_fuse] slowness 2
 execute if entity @a[tag=anim_fuse] run effect give @a[tag=anim_fuse] blindness 2 255 true
 # ATTRIBUTES #
 
-# COLORS #
-execute if entity @a[team=aqua] as @a[team=aqua] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_aqua,limit=1] armor.chest
-execute if entity @a[team=aqua] as @a[team=aqua] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_aqua,limit=1] armor.legs
-execute if entity @a[team=aqua] as @a[team=aqua] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_aqua,limit=1] armor.feet
-execute if entity @a[team=black] as @a[team=black] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_black,limit=1] armor.chest
-execute if entity @a[team=black] as @a[team=black] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_black,limit=1] armor.legs
-execute if entity @a[team=black] as @a[team=black] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_black,limit=1] armor.feet
-execute if entity @a[team=blue] as @a[team=blue] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_blue,limit=1] armor.chest
-execute if entity @a[team=blue] as @a[team=blue] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_blue,limit=1] armor.legs
-execute if entity @a[team=blue] as @a[team=blue] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_blue,limit=1] armor.feet
-execute if entity @a[team=gray] as @a[team=gray] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_gray,limit=1] armor.chest
-execute if entity @a[team=gray] as @a[team=gray] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_gray,limit=1] armor.legs
-execute if entity @a[team=gray] as @a[team=gray] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_gray,limit=1] armor.feet
-execute if entity @a[team=green] as @a[team=green] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_green,limit=1] armor.chest
-execute if entity @a[team=green] as @a[team=green] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_green,limit=1] armor.legs
-execute if entity @a[team=green] as @a[team=green] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_green,limit=1] armor.feet
-execute if entity @a[team=lime] as @a[team=lime] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_lime,limit=1] armor.chest
-execute if entity @a[team=lime] as @a[team=lime] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_lime,limit=1] armor.legs
-execute if entity @a[team=lime] as @a[team=lime] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_lime,limit=1] armor.feet
-execute if entity @a[team=orange] as @a[team=orange] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_orange,limit=1] armor.chest
-execute if entity @a[team=orange] as @a[team=orange] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_orange,limit=1] armor.legs
-execute if entity @a[team=orange] as @a[team=orange] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_orange,limit=1] armor.feet
-execute if entity @a[team=pink] as @a[team=pink] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_pink,limit=1] armor.chest
-execute if entity @a[team=pink] as @a[team=pink] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_pink,limit=1] armor.legs
-execute if entity @a[team=pink] as @a[team=pink] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_pink,limit=1] armor.feet
-execute if entity @a[team=purple] as @a[team=purple] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_purple,limit=1] armor.chest
-execute if entity @a[team=purple] as @a[team=purple] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_purple,limit=1] armor.legs
-execute if entity @a[team=purple] as @a[team=purple] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_purple,limit=1] armor.feet
-execute if entity @a[team=redsus] as @a[team=redsus] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_redsus,limit=1] armor.chest
-execute if entity @a[team=redsus] as @a[team=redsus] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_redsus,limit=1] armor.legs
-execute if entity @a[team=redsus] as @a[team=redsus] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_redsus,limit=1] armor.feet
-execute if entity @a[team=white] as @a[team=white] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_white,limit=1] armor.chest
-execute if entity @a[team=white] as @a[team=white] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_white,limit=1] armor.legs
-execute if entity @a[team=white] as @a[team=white] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_white,limit=1] armor.feet
-execute if entity @a[team=yellow] as @a[team=yellow] unless data entity @s {Inventory:[{Slot:102b,id:"minecraft:leather_chestplate"}]} run item replace entity @s armor.chest from entity @e[tag=as_yellow,limit=1] armor.chest
-execute if entity @a[team=yellow] as @a[team=yellow] unless data entity @s {Inventory:[{Slot:101b,id:"minecraft:leather_leggings"}]} run item replace entity @s armor.legs from entity @e[tag=as_yellow,limit=1] armor.legs
-execute if entity @a[team=yellow] as @a[team=yellow] unless data entity @s {Inventory:[{Slot:100b,id:"minecraft:leather_boots"}]} run item replace entity @s armor.feet from entity @e[tag=as_yellow,limit=1] armor.feet
-# COLORS #
 
 # MEETING #
 execute if entity @a[tag=inmeeting,tag=color_picked,tag=discussing] run scoreboard players add Discussion amogus_timer 1
@@ -227,10 +189,10 @@ execute if entity @a[tag=!cam_player,team=yellow] as @a[tag=!cam_player,team=yel
 # MONITORING #
 
 # END OF GAME #
-execute unless entity @a[scores={tasks_left=1..}] run function amogus:game/end/crewmates
-execute store result score ALL alive if entity @a[tag=color_picked,tag=!dead]
-execute store result score IMPOSTORS alive if entity @a[tag=color_picked,tag=impostor,tag=!dead]
-execute store result score CREWMATES alive if entity @a[tag=color_picked,tag=crewmate,tag=!dead]
+execute if entity @a[tag=ingame] unless entity @a[scores={tasks_left=1..}] run function amogus:game/end/crewmates
+execute store result score ALL alive if entity @a[tag=ingame,tag=color_picked,tag=!dead]
+execute store result score IMPOSTORS alive if entity @a[tag=ingame,tag=color_picked,tag=impostor,tag=!dead]
+execute store result score CREWMATES alive if entity @a[tag=ingame,tag=color_picked,tag=crewmate,tag=!dead]
 execute if score IMPOSTORS matches matches 0 run function amogus:game/end/crewmates
 execute if score IMPOSTORS matches matches 2 if score ALL alive matches ..4 run function amogus:game/end/impostors
 execute if score IMPOSTORS matches matches 1 if score ALL alive matches ..2 run function amogus:game/end/impostors

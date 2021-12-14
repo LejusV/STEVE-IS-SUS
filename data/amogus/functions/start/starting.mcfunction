@@ -1,6 +1,7 @@
 execute if score Impostors: amogus_settings matches 1 if score #TEMP color_picked_nb matches 3.. run function amogus:start/start_1sus 
 execute if score Impostors: amogus_settings matches 2 if score #TEMP color_picked_nb matches 3.. run function amogus:start/start_2sus 
 # a changer la au dessus le nb de joueurs
+fill 46 27 79 46 28 76 minecraft:iron_bars
 effect give @a[tag=color_picked,gamemode=adventure] minecraft:saturation 1 255 true
 effect give @a[tag=color_picked,gamemode=adventure] minecraft:hunger 6 255 true
 effect give @a[tag=color_picked,gamemode=adventure] slowness 6 255 true
@@ -17,6 +18,20 @@ execute if score Short amogus_settings matches 5.. as @a[tag=crewmate,tag=color_
 
 execute if entity @a[tag=todo_s_download] as @a[tag=todo_s_download] run function amogus:tasks/download_loc/assign
 execute if entity @a[tag=todo_c_wires] as @a[tag=todo_c_wires] run function amogus:tasks/wires_loc/assign
+
+tag @a[tag=color_picked,gamemode=adventure] add ingame
+fill 46 27 79 46 28 76 minecraft:iron_bars
+fill 49 27 76 52 28 76 minecraft:iron_bars
+fill 55 27 76 58 28 76 minecraft:iron_bars
+fill 61 27 76 64 28 76 minecraft:iron_bars
+fill 68 27 79 68 28 82 minecraft:iron_bars
+fill 68 27 85 68 28 88 minecraft:iron_bars  
+fill 68 27 91 68 28 94 minecraft:iron_bars
+fill 68 27 97 68 28 100 minecraft:iron_bars
+fill 68 27 103 67 28 103 minecraft:iron_bars
+fill 67 27 104 67 28 103 minecraft:iron_bars
+fill 64 27 105 61 28 105 minecraft:iron_bars
+fill 58 27 105 55 28 105 minecraft:iron_bars
 
 execute at @e[type=villager,tag=click_villager_start,limit=1] run tp @r[tag=color_picked,gamemode=adventure,distance=..30] @e[type=armor_stand,tag=spawn_location_0,limit=1]
 execute at @e[type=villager,tag=click_villager_start,limit=1] run tp @r[tag=color_picked,gamemode=adventure,distance=..30] @e[type=armor_stand,tag=spawn_location_6,limit=1]
