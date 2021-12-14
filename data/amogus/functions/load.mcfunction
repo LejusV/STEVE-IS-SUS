@@ -118,6 +118,16 @@ scoreboard objectives remove course_step
 
 scoreboard objectives remove manifol_click
 scoreboard objectives remove manifol_temp
+scoreboard objectives remove manifol_1
+scoreboard objectives remove manifol_2
+scoreboard objectives remove manifol_3
+scoreboard objectives remove manifol_4
+scoreboard objectives remove manifol_5
+scoreboard objectives remove manifol_6
+scoreboard objectives remove manifol_7
+scoreboard objectives remove manifol_8
+scoreboard objectives remove manifol_9
+
 scoreboard objectives remove steering_y_rota
 scoreboard objectives remove steering_z_rota
 
@@ -150,6 +160,11 @@ scoreboard objectives remove card_loop
 
 scoreboard objectives remove filter_count
 scoreboard objectives remove filtered
+
+scoreboard objectives remove tasks_left
+scoreboard objectives remove alive
+
+scoreboard objectives remove sneak
 
 scoreboard objectives add color_picked_nb dummy
 scoreboard objectives add amogus_settings dummy "SETTINGS"
@@ -214,6 +229,16 @@ scoreboard objectives add course_step trigger
 scoreboard objectives add manifol_click trigger
 scoreboard objectives add manifol dummy
 scoreboard objectives add manifol_temp dummy
+scoreboard objectives add manifol_1 dummy
+scoreboard objectives add manifol_2 dummy
+scoreboard objectives add manifol_3 dummy
+scoreboard objectives add manifol_4 dummy
+scoreboard objectives add manifol_5 dummy
+scoreboard objectives add manifol_6 dummy
+scoreboard objectives add manifol_7 dummy
+scoreboard objectives add manifol_8 dummy
+scoreboard objectives add manifol_9 dummy
+
 scoreboard objectives add steering_y_rota dummy
 scoreboard objectives add steering_z_rota dummy
 
@@ -249,6 +274,11 @@ scoreboard objectives add card_4 dummy
 
 scoreboard objectives add filter_count dummy
 scoreboard objectives add filtered dummy
+
+scoreboard objectives add tasks_left dummy
+scoreboard objectives add alive dummy
+
+scoreboard objectives add sneak minecraft.custom:minecraft.sneak_time
 
 team remove aqua
 team remove black
@@ -447,7 +477,27 @@ tag @a remove todo_l_fuel
 tag @a remove todo_c_cardswipe
 tag @a remove todo_c_wires
 
-tag @e remove task_download
+tag @a remove task_asteroids
+tag @a remove task_cardswipe
+tag @a remove task_course
+tag @a remove task_distributor
+tag @a remove task_divertpow
+tag @a remove task_download
+tag @a remove task_engine
+tag @a remove task_filter
+tag @a remove task_fuel1
+tag @a remove task_fuel2
+tag @a remove task_garbage
+tag @a remove task_manifolds
+tag @a remove task_refueling
+tag @a remove task_samples
+tag @a remove task_scan
+tag @a remove task_shields
+tag @a remove task_simon
+tag @a remove task_steering
+tag @a remove task_wires
+tag @a remove anim_fuse
+tag @a remove cam_player
 
 tag @e remove aqua_wire_1
 tag @e remove aqua_wire_2
@@ -511,8 +561,6 @@ tag @e remove manifol_6
 tag @e remove manifol_7
 tag @e remove manifol_8
 tag @e remove manifol_9
-tag @e remove task_manifolds
-tag @e remove task_steering
 
 kill @e[tag=steer_target_set]
 kill @e[tag=aqua_steer_target]
@@ -527,6 +575,15 @@ kill @e[tag=purple_steer_target]
 kill @e[tag=redsus_steer_target]
 kill @e[tag=white_steer_target]
 kill @e[tag=yellow_steer_target]
+
+kill @e[tag=meteorite]
+
+kill @e[tag=leaf]
+
+kill @e[tag=meteorite]
+
+kill @e[tag=as_color]
+kill @e[tag=click_villager]
 
 team add redsus "RED"
 team add orange "ORANGE"
@@ -603,3 +660,32 @@ team modify pink seeFriendlyInvisibles false
 team modify purple seeFriendlyInvisibles false
 team modify gray seeFriendlyInvisibles false
 team join IA @e[type=villager]
+
+
+summon armor_stand 45.0 39.0 78.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:2424829}}},{id:"leather_leggings",Count:1b,tag:{display:{color:2424829}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:2424829}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[-90f],Tags:[as_aqua,as_color]}
+summon minecraft:villager 45.0 27.0 78.0 {Tags:[click_villager_aqua,click_villager],Rotation:[-90f],NoAI:1,Silent:1}
+summon armor_stand 51.0 39.0 75.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:2697513}}},{id:"leather_leggings",Count:1b,tag:{display:{color:2697513}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:2697513}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[0f],Tags:[as_black,as_color]}
+summon minecraft:villager 51.0 27.0 75.0 {Tags:[click_villager_black,click_villager],Rotation:[0f],NoAI:1,Silent:1}
+summon armor_stand 57.0 39.0 75.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:3292078}}},{id:"leather_leggings",Count:1b,tag:{display:{color:3292078}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:3292078}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[0f],Tags:[as_blue,as_color]}
+summon minecraft:villager 57.0 27.0 75.0 {Tags:[click_villager_blue,click_villager],Rotation:[0f],NoAI:1,Silent:1}
+summon armor_stand 63.0 39.0 75.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:10592673}}},{id:"leather_leggings",Count:1b,tag:{display:{color:10592673}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:10592673}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[0f],Tags:[as_gray,as_color]}
+summon minecraft:villager 63.0 27.0 75.0 {Tags:[click_villager_gray,click_villager],Rotation:[0f],NoAI:1,Silent:1}
+summon armor_stand 70.0 39.0 81.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:3907597}}},{id:"leather_leggings",Count:1b,tag:{display:{color:3907597}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:3907597}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[90f],Tags:[as_green,as_color]}
+summon minecraft:villager 70.0 27.0 81.0 {Tags:[click_villager_green,click_villager],Rotation:[90f],NoAI:1,Silent:1}
+summon armor_stand 70.0 39.0 87.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:4194089}}},{id:"leather_leggings",Count:1b,tag:{display:{color:4194089}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:4194089}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[90f],Tags:[as_lime,as_color]}
+summon minecraft:villager 70.0 27.0 87.0 {Tags:[click_villager_lime,click_villager],Rotation:[90f],NoAI:1,Silent:1}
+summon armor_stand 70.0 39.0 93.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:16750121}}},{id:"leather_leggings",Count:1b,tag:{display:{color:16750121}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:16750121}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[90f],Tags:[as_orange,as_color]}
+summon minecraft:villager 70.0 27.0 93.0 {Tags:[click_villager_orange,click_villager],Rotation:[90f],NoAI:1,Silent:1}
+summon armor_stand 70.0 39.0 99.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:16344821}}},{id:"leather_leggings",Count:1b,tag:{display:{color:16344821}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:16344821}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[90f],Tags:[as_pink,as_color]}
+summon minecraft:villager 70.0 27.0 99.0 {Tags:[click_villager_pink,click_villager],Rotation:[90f],NoAI:1,Silent:1}
+summon armor_stand 69.0 39.0 105.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:7288776}}},{id:"leather_leggings",Count:1b,tag:{display:{color:7288776}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:7288776}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[135f],Tags:[as_purple,as_color]}
+summon minecraft:villager 69.0 27.0 105.0 {Tags:[click_villager_purple,click_villager],Rotation:[135f],NoAI:1,Silent:1}
+summon armor_stand 56.5 22.0 94.5 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:14425632}}},{id:"leather_leggings",Count:1b,tag:{display:{color:14425632}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:14425632}}},{}],HandItems:[{id:"minecraft:tipped_arrow",Count:1b,tag:{Potion:"minecraft:healing"}},{}],DisabledSlots:4144959,Rotation:[180f],Tags:[as_redsus,as_color]}
+summon minecraft:villager 56.5 15.0 94.5 {Tags:[click_villager_redsus,click_villager],Rotation:[180f],NoAI:1,Silent:1}
+summon armor_stand 63.0 39.0 107.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:16777215}}},{id:"leather_leggings",Count:1b,tag:{display:{color:16777215}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:16777215}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[180f],Tags:[as_white,as_color]}
+summon minecraft:villager 63.0 27.0 107.0 {Tags:[click_villager_white,click_villager],Rotation:[180f],NoAI:1,Silent:1}
+summon armor_stand 57.0 39.0 107.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:16776770}}},{id:"leather_leggings",Count:1b,tag:{display:{color:16776770}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:16776770}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[180f],Tags:[as_yellow,as_color]}
+summon minecraft:villager 57.0 27.0 107.0 {Tags:[click_villager_yellow,click_villager],Rotation:[180f],NoAI:1,Silent:1}
+
+# o2_air_vent
+execute positioned 60.5 101.00 57.5 run function amogus:structures/as_o2_airvent

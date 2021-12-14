@@ -1,0 +1,1 @@
+scoreboard players operation @s manifol_1 = @e[scores={manifol=1..9},type=armor_stand,limit=1,sort=random] manifol

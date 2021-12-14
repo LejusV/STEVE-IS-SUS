@@ -14,6 +14,6 @@
       }
     },
     "rewards": {
-      "function": "amogus:tasks/navigation/steering"
+      "function": "amogus:tasks/navigation/steering/check"
     }
   }

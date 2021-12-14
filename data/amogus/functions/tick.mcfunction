@@ -1,3 +1,7 @@
+execute if entity @a[scores={sneak=1..}] as @a[scores={sneak=1..},gamemode=adventure] at @s if block ~ ~-1 ~ crimson_nylium run tp @s ~ ~-4 ~
+execute if entity @a[scores={sneak=1..}] as @a[scores={sneak=1..}] run scoreboard players set @s sneak 0
+execute if entity @a[x=56,y=24.8,z=88,dx=0,dy=0,dz=0] as @a[x=56,y=24.8,z=88,dx=0,dy=0,dz=0] at @s run tp @s 56.5 26.1 88.5
+
 effect give @e[type=villager] invisibility 2 1 true
 execute store result score #TEMP color_picked_nb if entity @a[tag=color_picked]
 execute unless entity @a[team=aqua] run item replace entity @e[tag=as_aqua,limit=1] armor.head with air

@@ -1,6 +1,7 @@
 # DEAD PEOPLE DON'T TALK #
 execute if entity @a[scores={death=1}] run execute as @a[scores={death=1}] run function amogus:death
 execute if entity @a[tag=dead] run gamemode spectator @a[tag=dead]
+# DEAD PEOPLE DON'T TALK #
 
 # MAP ADJUSTMENTS #
 stopsound @a * minecraft:entity.glow_item_frame.add_item
@@ -17,6 +18,8 @@ execute if block 36 100 5 acacia_trapdoor[facing=west,half=top,open=true] run se
 fill 27 103 47 28 103 48 minecraft:spruce_trapdoor[facing=west,half=top,open=false,powered=false,waterlogged=false] replace minecraft:spruce_trapdoor[facing=west,half=top,open=true,powered=false,waterlogged=false]
 fill 22 103 44 23 103 45 minecraft:spruce_trapdoor[facing=south,half=top,open=false,powered=false,waterlogged=false] replace minecraft:spruce_trapdoor[facing=south,half=top,open=true,powered=false,waterlogged=false]
 fill 27 103 47 28 103 48 minecraft:spruce_trapdoor[facing=west,half=top,open=false,powered=false,waterlogged=false] replace minecraft:spruce_trapdoor[facing=west,half=top,open=true,powered=false,waterlogged=false]
+
+execute positioned 50 101 38 run particle minecraft:dust_color_transition 0.6 0.6 0.6 1 0.4 0.2 0 ~ ~.01 ~ 18 0 18 1 7 normal @a
 # MAP ADJUSTMENTS #
 
 # ATTRIBUTES #
@@ -124,8 +127,9 @@ execute if entity @a[tag=task_download] as @a[tag=task_download] run function am
 # wires_task
 execute if entity @a[tag=todo_c_wires] as @a[tag=todo_c_wires] run function amogus:tasks/admin/wires/tick/loc
 # garbage_task
+execute at @e[tag=task_garbage,type=villager] if entity @a[tag=todo_l_garbage,distance=..5] run scoreboard players add garbage amogus_timer 1
 execute if entity @a[tag=todo_l_garbage] as @a[tag=todo_l_garbage] run function amogus:tasks/storage/garbage/tick
-execute at @e[tag=task_garbage,type=villager] if entity @a[distance=..5] run scoreboard players add garbage amogus_timer 1
+execute if score garbage amogus_timer matches 3.. run scoreboard players set garbage amogus_timer 0
 # shields_task
 execute if entity @a[tag=todo_s_shields,scores={shields_pattern=1..}] as @a[tag=todo_s_shields,scores={shields_pattern=1..}] run function amogus:tasks/shield/shields/tick
 execute if entity @a[scores={shields_pattern=-1}] as @a[scores={shields_pattern=-1}] run function amogus:tasks/shield/shields/end
@@ -136,6 +140,8 @@ execute if entity @a[tag=task_course] as @a[tag=task_course] run function amogus
 # manifolds_task
 execute if entity @a[tag=task_manifolds] as @a[tag=task_manifolds] run function amogus:tasks/reactor/manifolds/tick
 # steering_task
+execute if entity @a[tag=steer_wait] as @a[tag=steer_wait] run scoreboard players add @s amogus_timer 1
+execute if entity @a[tag=steer_wait] as @a[tag=steer_wait,scores={amogus_timer=10}] run function amogus:tasks/navigation/steering
 execute if entity @a[tag=task_steering] as @a[tag=task_steering] at @s anchored eyes rotated as @s run function amogus:tasks/navigation/steering/tick/particles/cursor
 # asteroids_task
 execute if entity @a[tag=task_asteroids] as @a[tag=task_asteroids] run function amogus:tasks/weapon/asteroids/tick/main
@@ -158,6 +164,46 @@ execute if entity @a[tag=task_simon] as @a[tag=task_simon] run function amogus:t
 execute if entity @a[tag=task_cardswipe] as @a[tag=task_cardswipe] run function amogus:tasks/admin/cardswipe/tick/main
 # O2filter_task
 execute if entity @a[tag=task_filter] as @a[tag=task_filter] run function amogus:tasks/o2/filter/tick/main
+
+# particles
+execute if entity @a[tag=todo_c_wires,scores={wires_loc=1}] as @a[tag=todo_c_wires,scores={wires_loc=1}] at @e[tag=w_cart_elec] run function amogus:tasks/particles/wires
+execute if entity @a[tag=todo_c_wires,scores={wires_loc=2}] as @a[tag=todo_c_wires,scores={wires_loc=2}] at @e[tag=w_cart_storage] run function amogus:tasks/particles/wires
+execute if entity @a[tag=todo_c_wires,scores={wires_loc=3}] as @a[tag=todo_c_wires,scores={wires_loc=3}] at @e[tag=w_cart_admin] run function amogus:tasks/particles/wires
+execute if entity @a[tag=todo_c_wires,scores={wires_loc=4}] as @a[tag=todo_c_wires,scores={wires_loc=4}] at @e[tag=w_cart_nav] run function amogus:tasks/particles/wires
+execute if entity @a[tag=todo_c_wires,scores={wires_loc=5}] as @a[tag=todo_c_wires,scores={wires_loc=5}] at @e[tag=w_cart_cafet] run function amogus:tasks/particles/wires
+execute if entity @a[tag=todo_c_wires,scores={wires_loc=6}] as @a[tag=todo_c_wires,scores={wires_loc=6}] at @e[tag=w_cart_secu] run function amogus:tasks/particles/wires
+execute if entity @a[tag=todo_s_download,scores={download_stage=1}] as @a[tag=todo_s_download,scores={download_stage=1}] at @e[tag=task_admin_upload] run function amogus:tasks/particles/download
+execute if entity @a[tag=todo_s_download,scores={download_stage=2}] as @a[tag=todo_s_download,scores={download_stage=2}] at @e[tag=task_cafet_download] run function amogus:tasks/particles/download
+execute if entity @a[tag=todo_s_download,scores={download_stage=3}] as @a[tag=todo_s_download,scores={download_stage=3}] at @e[tag=task_comm_download] run function amogus:tasks/particles/download
+execute if entity @a[tag=todo_s_download,scores={download_stage=4}] as @a[tag=todo_s_download,scores={download_stage=4}] at @e[tag=task_elec_download] run function amogus:tasks/particles/download
+execute if entity @a[tag=todo_s_download,scores={download_stage=5}] as @a[tag=todo_s_download,scores={download_stage=5}] at @e[tag=task_nav_download] run function amogus:tasks/particles/download
+execute if entity @a[tag=todo_s_download,scores={download_stage=6}] as @a[tag=todo_s_download,scores={download_stage=6}] at @e[tag=task_weapon_download] run function amogus:tasks/particles/download
+execute if entity @a[tag=task_fuel,tag=todo_l_fuel,scores={fuel_stage=1}] as @a[tag=task_fuel,tag=todo_l_fuel,scores={fuel_stage=1}] at @e[tag=task_upeng_fuel] rotated as @e[tag=task_upeng_fuel] run function amogus:tasks/particles/default
+execute if entity @a[tag=task_fuel,tag=todo_l_fuel,scores={fuel_stage=2}] as @a[tag=task_fuel,tag=todo_l_fuel,scores={fuel_stage=2}] at @e[tag=task_loweng_fuel] rotated as @e[tag=task_loweng_fuel] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_l_fuel,tag=task_refuel] as @a[tag=todo_l_fuel,tag=task_refuel] at @e[tag=task_storage_fuel] rotated as @e[tag=task_storage_fuel] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_l_engine,scores={engine_stage=1}] as @a[tag=todo_l_engine,scores={engine_stage=1}] at @e[tag=task_up_eng] rotated as @e[tag=task_up_eng] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_l_engine,scores={engine_stage=2}] as @a[tag=todo_l_engine,scores={engine_stage=2}] at @e[tag=task_low_eng] rotated as @e[tag=task_low_eng] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_distributor,tag=!task_distributor] as @a[tag=todo_s_distributor,tag=!task_distributor] at @e[tag=task_elec_distributor] rotated as @e[tag=task_elec_distributor] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=0..8}] at @e[tag=task_elec_divertpow] positioned ~ ~.6 ~ rotated as @e[tag=task_elec_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=11},tag=!anim_fuse] at @e[tag=task_comm_divertpow] rotated as @e[tag=task_comm_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=12},tag=!anim_fuse] at @e[tag=task_loweng_divertpow] positioned ~ ~.6 ~ rotated as @e[tag=task_loweng_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=13},tag=!anim_fuse] at @e[tag=task_upeng_divertpow] positioned ~-.2 ~.2 ~-.2 rotated as @e[tag=task_upeng_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=14},tag=!anim_fuse] at @e[tag=task_weapon_divertpow] positioned ~ ~.6 ~ rotated as @e[tag=task_weapon_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=15},tag=!anim_fuse] at @e[tag=task_shield_divertpow] positioned ~-.5 ~.2 ~.1 rotated as @e[tag=task_shield_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=16},tag=!anim_fuse] at @e[tag=task_nav_divertpow] positioned ~-.2 ~.2 ~-.2 rotated as @e[tag=task_nav_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=17},tag=!anim_fuse] at @e[tag=task_o2_divertpow] positioned ~ ~.6 ~ rotated as @e[tag=task_o2_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_divertpow] as @a[tag=todo_s_divertpow,scores={divertpow=18},tag=!anim_fuse] at @e[tag=task_secu_divertpow] positioned ~ ~.2 ~ rotated as @e[tag=task_secu_divertpow] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_c_cardswipe] as @a[tag=todo_c_cardswipe] at @e[tag=task_admin_cardswipe] rotated as @e[tag=task_admin_cardswipe] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_l_scan] as @a[tag=todo_l_scan] at @e[tag=task_medbay_scan] rotated as @e[tag=task_medbay_scan] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_l_samples] as @a[tag=todo_l_samples] at @e[tag=task_medbay_samples] rotated as @e[tag=task_medbay_samples] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_course] as @a[tag=todo_s_course] at @e[tag=task_nav_course] rotated as @e[tag=task_nav_course] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_steering] as @a[tag=todo_s_steering] at @e[tag=task_nav_steering] rotated as @e[tag=task_nav_steering] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_O2filter] as @a[tag=todo_s_O2filter] at @e[tag=task_o2_filter] rotated as @e[tag=task_o2_filter] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_manifolds] as @a[tag=todo_s_manifolds] at @e[tag=task_reactor_manifolds] rotated as @e[tag=task_reactor_manifolds] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_l_reactor,tag=!task_simon] as @a[tag=todo_l_reactor,tag=!task_simon] at @e[tag=task_reactor_reactor] rotated as @e[tag=task_reactor_reactor] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_shields] as @a[tag=todo_s_shields] at @e[tag=task_shields_shield] rotated as @e[tag=task_shields_shield] run function amogus:tasks/particles/default
+execute if entity @a[tag=todo_s_asteroids] as @a[tag=todo_s_asteroids] at @e[tag=task_weapon_aster] rotated as @e[tag=task_weapon_aster] run function amogus:tasks/particles/default
+
 # TASKS #
 
 # MONITORING #
@@ -165,4 +211,27 @@ execute if entity @a[tag=task_filter] as @a[tag=task_filter] run function amogus
 execute if entity @a[tag=check_admin] as @a[tag=check_admin] unless entity @s[x=41.00,y=101.5,z=59.00,dy=1,dz=4] run tag @s remove check_admin
 execute if block 7 101 32 red_wool if entity @a[x=41.00,y=101.5,z=59.00,dy=1,dz=3] as @a[x=41.00,y=101.5,z=59.00,dy=1,dz=3] run tag @s add check_admin
 execute if entity @a[tag=check_admin] run function amogus:monitoring/admin/tick
+# cam
+execute if entity @a[tag=!cam_player,team=aqua] as @a[tag=!cam_player,team=aqua] run tp @e[type=skeleton,tag=aqua_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=black] as @a[tag=!cam_player,team=black] run tp @e[type=skeleton,tag=black_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=blue] as @a[tag=!cam_player,team=blue] run tp @e[type=skeleton,tag=blue_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=gray] as @a[tag=!cam_player,team=gray] run tp @e[type=skeleton,tag=gray_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=green] as @a[tag=!cam_player,team=green] run tp @e[type=skeleton,tag=green_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=lime] as @a[tag=!cam_player,team=lime] run tp @e[type=skeleton,tag=lime_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=orange] as @a[tag=!cam_player,team=orange] run tp @e[type=skeleton,tag=orange_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=pink] as @a[tag=!cam_player,team=pink] run tp @e[type=skeleton,tag=pink_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=purple] as @a[tag=!cam_player,team=purple] run tp @e[type=skeleton,tag=purple_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=redsus] as @a[tag=!cam_player,team=redsus] run tp @e[type=skeleton,tag=redsus_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=white] as @a[tag=!cam_player,team=white] run tp @e[type=skeleton,tag=white_cam] 0 -100 0
+execute if entity @a[tag=!cam_player,team=yellow] as @a[tag=!cam_player,team=yellow] run tp @e[type=skeleton,tag=yellow_cam] 0 -100 0
 # MONITORING #
+
+# END OF GAME #
+execute unless entity @a[scores={tasks_left=1..}] run function amogus:game/end/crewmates
+execute store result score ALL alive if entity @a[tag=color_picked,tag=!dead]
+execute store result score IMPOSTORS alive if entity @a[tag=color_picked,tag=impostor,tag=!dead]
+execute store result score CREWMATES alive if entity @a[tag=color_picked,tag=crewmate,tag=!dead]
+execute if score IMPOSTORS matches matches 0 run function amogus:game/end/crewmates
+execute if score IMPOSTORS matches matches 2 if score ALL alive matches ..4 run function amogus:game/end/impostors
+execute if score IMPOSTORS matches matches 1 if score ALL alive matches ..2 run function amogus:game/end/impostors
+# END OF GAME #

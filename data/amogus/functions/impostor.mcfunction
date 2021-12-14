@@ -17,89 +17,77 @@ scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=
 scoreboard players enable @s[tag=!invent,tag=!cam_player,gamemode=adventure,tag=notinmeeting] sab_door_storage
 
 execute if block 84 100 76 #minecraft:buttons[face=wall,facing=west,powered=true] run scoreboard players add vent_weapon amogus_timer 1
-execute if block 84 100 76 #minecraft:buttons[face=wall,facing=west,powered=true] if score vent_weapon amogus_timer matches 20 run setblock 84 100 76 air
-execute if score vent_weapon amogus_timer > 0 amogus_timer if block 84 100 76 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_weapon amogus_timer > 0 amogus_timer if block 84 100 76 air run scoreboard players set vent_weapon amogus_timer 0
+execute if block 84 100 76 #minecraft:buttons[face=wall,facing=west,powered=true] if score vent_weapon amogus_timer matches 25 run setblock 84 100 76 air
+execute if score vent_weapon amogus_timer matches 1.. if block 84 100 76 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_weapon amogus_timer matches 1.. if block 84 100 76 air run scoreboard players set vent_weapon amogus_timer 0
 
 execute if block 57 100 92 #minecraft:buttons[face=wall,facing=west,powered=true] run scoreboard players add vent_nav1 amogus_timer 1
-execute if block 57 100 92 #minecraft:buttons[face=wall,facing=west,powered=true] if score vent_nav1 amogus_timer matches 20 run setblock 57 100 92 air
-execute if score vent_nav1 amogus_timer > 0 amogus_timer if block 57 100 92 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_nav1 amogus_timer > 0 amogus_timer if block 57 100 92 air run scoreboard players set vent_nav1 amogus_timer 0
+execute if block 57 100 92 #minecraft:buttons[face=wall,facing=west,powered=true] if score vent_nav1 amogus_timer matches 25 run setblock 57 100 92 air
+execute if score vent_nav1 amogus_timer matches 1.. if block 57 100 92 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_nav1 amogus_timer matches 1.. if block 57 100 92 air run scoreboard players set vent_nav1 amogus_timer 0
 
 execute if block 47 100 92 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_nav2 amogus_timer 1
-execute if block 47 100 92 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_nav2 amogus_timer matches 20 run setblock 47 100 92 air
-execute if score vent_nav2 amogus_timer > 0 amogus_timer if block 47 100 92 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_nav2 amogus_timer > 0 amogus_timer if block 47 100 92 air run scoreboard players set vent_nav2 amogus_timer 0
+execute if block 47 100 92 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_nav2 amogus_timer matches 25 run setblock 47 100 92 air
+execute if score vent_nav2 amogus_timer matches 1.. if block 47 100 92 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_nav2 amogus_timer matches 1.. if block 47 100 92 air run scoreboard players set vent_nav2 amogus_timer 0
 
 execute if block 49 100 71 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_corridorR amogus_timer 1
-execute if block 49 100 71 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_corridorR amogus_timer matches 20 run setblock 49 100 71 air
-execute if score vent_corridorR amogus_timer > 0 amogus_timer if block 49 100 71 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_corridorR amogus_timer > 0 amogus_timer if block 49 100 71 air run scoreboard players set vent_corridorR amogus_timer 0
+execute if block 49 100 71 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_corridorR amogus_timer matches 25 run setblock 49 100 71 air
+execute if score vent_corridorR amogus_timer matches 1.. if block 49 100 71 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_corridorR amogus_timer matches 1.. if block 49 100 71 air run scoreboard players set vent_corridorR amogus_timer 0
 
 execute if block 23 100 73 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_shield amogus_timer 1
-execute if block 23 100 73 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_shield amogus_timer matches 20 run setblock 23 100 73 air
-execute if score vent_shield amogus_timer > 0 amogus_timer if block 23 100 73 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_shield amogus_timer > 0 amogus_timer if block 23 100 73 air run scoreboard players set vent_shield amogus_timer 0
+execute if block 23 100 73 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_shield amogus_timer matches 25 run setblock 23 100 73 air
+execute if score vent_shield amogus_timer matches 1.. if block 23 100 73 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_shield amogus_timer matches 1.. if block 23 100 73 air run scoreboard players set vent_shield amogus_timer 0
 
 execute if block 40 100 55 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_admin amogus_timer 1
-execute if block 40 100 55 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_admin amogus_timer matches 20 run setblock 40 100 55 air
-execute if score vent_admin amogus_timer > 0 amogus_timer if block 40 100 55 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_admin amogus_timer > 0 amogus_timer if block 40 100 55 air run scoreboard players set vent_admin amogus_timer 0
+execute if block 40 100 55 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_admin amogus_timer matches 25 run setblock 40 100 55 air
+execute if score vent_admin amogus_timer matches 1.. if block 40 100 55 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_admin amogus_timer matches 1.. if block 40 100 55 air run scoreboard players set vent_admin amogus_timer 0
 
 execute if block 49 100 28 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_electrical amogus_timer 1
-execute if block 49 100 28 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_electrical amogus_timer matches 20 run setblock 49 100 28 air
-execute if score vent_electrical amogus_timer > 0 amogus_timer if block 49 100 28 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_electrical amogus_timer > 0 amogus_timer if block 49 100 28 air run scoreboard players set vent_electrical amogus_timer 0
+execute if block 49 100 28 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_electrical amogus_timer matches 25 run setblock 49 100 28 air
+execute if score vent_electrical amogus_timer matches 1.. if block 49 100 28 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_electrical amogus_timer matches 1.. if block 49 100 28 air run scoreboard players set vent_electrical amogus_timer 0
 
 execute if block 29 100 8 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_lowengine amogus_timer 1
-execute if block 29 100 8 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_lowengine amogus_timer matches 20 run setblock 29 100 8 air
-execute if score vent_lowengine amogus_timer > 0 amogus_timer if block 29 100 8 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_lowengine amogus_timer > 0 amogus_timer if block 29 100 8 air run scoreboard players set vent_lowengine amogus_timer 0
+execute if block 29 100 8 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_lowengine amogus_timer matches 25 run setblock 29 100 8 air
+execute if score vent_lowengine amogus_timer matches 1.. if block 29 100 8 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_lowengine amogus_timer matches 1.. if block 29 100 8 air run scoreboard players set vent_lowengine amogus_timer 0
 
 execute if block 51 100 -5 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_reactor2 amogus_timer 1
-execute if block 51 100 -5 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_reactor2 amogus_timer matches 20 run setblock 51 100 -5 air
-execute if score vent_reactor2 amogus_timer > 0 amogus_timer if block 51 100 -5 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_reactor2 amogus_timer > 0 amogus_timer if block 51 100 -5 air run scoreboard players set vent_reactor2 amogus_timer 0
+execute if block 51 100 -5 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_reactor2 amogus_timer matches 25 run setblock 51 100 -5 air
+execute if score vent_reactor2 amogus_timer matches 1.. if block 51 100 -5 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_reactor2 amogus_timer matches 1.. if block 51 100 -5 air run scoreboard players set vent_reactor2 amogus_timer 0
 
 execute if block 64 100 -11 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_reactor1 amogus_timer 1
-execute if block 64 100 -11 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_reactor1 amogus_timer matches 20 run setblock 64 100 -11 air
-execute if score vent_reactor1 amogus_timer > 0 amogus_timer if block 64 100 -11 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_reactor1 amogus_timer > 0 amogus_timer if block 64 100 -11 air run scoreboard players set vent_reactor1 amogus_timer 0
+execute if block 64 100 -11 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_reactor1 amogus_timer matches 25 run setblock 64 100 -11 air
+execute if score vent_reactor1 amogus_timer matches 1.. if block 64 100 -11 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_reactor1 amogus_timer matches 1.. if block 64 100 -11 air run scoreboard players set vent_reactor1 amogus_timer 0
 
 execute if block 83 100 8 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_upengine amogus_timer 1
-execute if block 83 100 8 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_upengine amogus_timer matches 20 run setblock 83 100 8 air
-execute if score vent_upengine amogus_timer > 0 amogus_timer if block 83 100 8 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_upengine amogus_timer > 0 amogus_timer if block 83 100 8 air run scoreboard players set vent_upengine amogus_timer 0
+execute if block 83 100 8 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_upengine amogus_timer matches 25 run setblock 83 100 8 air
+execute if score vent_upengine amogus_timer matches 1.. if block 83 100 8 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_upengine amogus_timer matches 1.. if block 83 100 8 air run scoreboard players set vent_upengine amogus_timer 0
 
 execute if block 59 100 22 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_medbay amogus_timer 1
-execute if block 59 100 22 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_medbay amogus_timer matches 20 run setblock 59 100 22 air
-execute if score vent_medbay amogus_timer > 0 amogus_timer if block 59 100 22 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_medbay amogus_timer > 0 amogus_timer if block 59 100 22 air run scoreboard players set vent_medbay amogus_timer 0
+execute if block 59 100 22 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_medbay amogus_timer matches 25 run setblock 59 100 22 air
+execute if score vent_medbay amogus_timer matches 1.. if block 59 100 22 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_medbay amogus_timer matches 1.. if block 59 100 22 air run scoreboard players set vent_medbay amogus_timer 0
 
 execute if block 47 100 17 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_cam amogus_timer 1
-execute if block 47 100 17 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_cam amogus_timer matches 20 run setblock 47 100 17 air
-execute if score vent_cam amogus_timer > 0 amogus_timer if block 47 100 17 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
-execute if score vent_cam amogus_timer > 0 amogus_timer if block 47 100 17 air run scoreboard players set vent_cam amogus_timer 0
+execute if block 47 100 17 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_cam amogus_timer matches 25 run setblock 47 100 17 air
+execute if score vent_cam amogus_timer matches 1.. if block 47 100 17 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_cam amogus_timer matches 1.. if block 47 100 17 air run scoreboard players set vent_cam amogus_timer 0
 
 execute if block 72 100 58 #minecraft:buttons[face=wall,facing=east,powered=true] run scoreboard players add vent_cafet amogus_timer 1
-execute if block 72 100 58 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_cafet amogus_timer matches 20 run setblock 72 100 58 air
-execute if score vent_cafet amogus_timer > 0 amogus_timer if block 72 100 58 air run stopsound @a * block.iron_trapdoor.close
-execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ hopper run function amogus:impostor/vent/move
-execute if score vent_cafet amogus_timer > 0 amogus_timer if block 72 100 58 air run scoreboard players set vent_cafet amogus_timer 0
+execute if block 72 100 58 #minecraft:buttons[face=wall,facing=east,powered=true] if score vent_cafet amogus_timer matches 25 run setblock 72 100 58 air
+execute if score vent_cafet amogus_timer matches 1.. if block 72 100 58 air run stopsound @a * block.iron_trapdoor.close
+execute if score vent_cafet amogus_timer matches 1.. if block 72 100 58 air run scoreboard players set vent_cafet amogus_timer 0
 
+execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ hopper run function amogus:impostor/vent/move
+execute if entity @a[tag=invent,tag=color_picked,tag=impostor,gamemode=adventure] as @a[tag=invent,gamemode=adventure] at @s if block ~ ~-1 ~ observer run function amogus:impostor/vent/move
 
 execute if entity @s[tag=invent] run function amogus:impostor/invent
 

@@ -45,3 +45,5 @@ execute if entity @s[team=white] store result score @s engine_z run data get ent
 execute if entity @s[team=yellow] store result score @s engine_z run data get entity @e[tag=yellow_engine,type=minecraft:armor_stand,limit=1] Pos[2]
 
 execute if score @s engine_y matches 103 if score @s engine_z matches 1..3 run function amogus:tasks/upper_engine/engine/end
+execute at @e[tag=task_low_eng] if entity @s[scores={engine_stage=2},tag=task_engine,distance=10..] run function amogus:tasks/upper_engine/engine/fail
+execute at @e[tag=task_up_eng] if entity @s[scores={engine_stage=1},tag=task_engine,distance=10..] run function amogus:tasks/upper_engine/engine/fail
