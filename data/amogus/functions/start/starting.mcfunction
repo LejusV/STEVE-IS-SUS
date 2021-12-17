@@ -25,7 +25,7 @@ fill 49 27 76 52 28 76 minecraft:iron_bars
 fill 55 27 76 58 28 76 minecraft:iron_bars
 fill 61 27 76 64 28 76 minecraft:iron_bars
 fill 68 27 79 68 28 82 minecraft:iron_bars
-fill 68 27 85 68 28 88 minecraft:iron_bars  
+fill 68 27 85 68 28 88 minecraft:iron_bars
 fill 68 27 91 68 28 94 minecraft:iron_bars
 fill 68 27 97 68 28 100 minecraft:iron_bars
 fill 68 27 103 67 28 103 minecraft:iron_bars

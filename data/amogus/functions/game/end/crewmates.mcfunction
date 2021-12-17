@@ -7,5 +7,4 @@ title @a[tag=crewmate] title {"text":"Victory","bold":true,"color":"blue"}
 title @a[tag=impostor] subtitle {"selector":"@a[tag=impostor]"}
 title @a[tag=impostor] title {"text":"Defeat","bold":true,"color":"dark_red"}
 scoreboard players add @a[tag=crewmate] stat_wins 1
-tp @a ~ ~ ~
 reload

@@ -1,18 +1,7 @@
 tellraw @a {"text": "§8§l > §6§lAMOGUS §8§l< §7Datapack (re)loaded !"}
 tp @a 56.5 27.00 88.5 0 90
-gamemode adventure @a[name=!LejusVDP,tag=!developer]
-advancement revoke @a only amogus:colorpick/aqua
-advancement revoke @a only amogus:colorpick/black
-advancement revoke @a only amogus:colorpick/blue
-advancement revoke @a only amogus:colorpick/gray
-advancement revoke @a only amogus:colorpick/green
-advancement revoke @a only amogus:colorpick/lime
-advancement revoke @a only amogus:colorpick/orange
-advancement revoke @a only amogus:colorpick/pink
-advancement revoke @a only amogus:colorpick/purple
-advancement revoke @a only amogus:colorpick/redsus
-advancement revoke @a only amogus:colorpick/white
-advancement revoke @a only amogus:colorpick/yellow
+gamemode adventure @a[name=!"LejusVDP",tag=!developer]
+advancement revoke @a everything
 
 bossbar remove minecraft:kill_cd_1
 bossbar add minecraft:kill_cd_1 ["",{"text":"Kill Cooldown : ","bold":true,"color":"dark_red"},{"score":{"name":"@a[tag=sus1,tag=impostor,limit=1]","objective":"kill_cd_1"},"bold":true,"color":"dark_red"}]
@@ -479,6 +468,7 @@ tag @a remove todo_l_samples
 tag @a remove todo_l_fuel
 tag @a remove todo_c_cardswipe
 tag @a remove todo_c_wires
+tag @a remove temp_wires_loc
 
 tag @a remove task_asteroids
 tag @a remove task_cardswipe
@@ -493,6 +483,8 @@ tag @a remove task_fuel2
 tag @a remove task_garbage
 tag @a remove task_manifolds
 tag @a remove task_refueling
+tag @a remove task_refuel
+tag @a remove task_fuel
 tag @a remove task_samples
 tag @a remove task_scan
 tag @a remove task_shields
@@ -697,7 +689,7 @@ fill 49 27 76 52 28 76 minecraft:air
 fill 55 27 76 58 28 76 minecraft:air
 fill 61 27 76 64 28 76 minecraft:air
 fill 68 27 79 68 28 82 minecraft:air
-fill 68 27 85 68 28 88 minecraft:air  
+fill 68 27 85 68 28 88 minecraft:air
 fill 68 27 91 68 28 94 minecraft:air
 fill 68 27 97 68 28 100 minecraft:air
 fill 68 27 103 67 28 103 minecraft:air

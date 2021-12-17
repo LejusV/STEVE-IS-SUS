@@ -13,3 +13,4 @@ execute if entity @s[team=redsus] run kill @e[tag=redsus_steer_target,type=armor
 execute if entity @s[team=white] run kill @e[tag=white_steer_target,type=armor_stand]
 execute if entity @s[team=yellow] run kill @e[tag=yellow_steer_target,type=armor_stand]
 tag @s remove todo_s_steering
+scoreboard players remove @s tasks_left 1

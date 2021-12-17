@@ -166,6 +166,8 @@ execute if entity @a[tag=todo_l_reactor,tag=!task_simon] as @a[tag=todo_l_reacto
 execute if entity @a[tag=todo_s_shields] as @a[tag=todo_s_shields] at @e[tag=task_shields_shield] rotated as @e[tag=task_shields_shield] run function amogus:tasks/particles/default
 execute if entity @a[tag=todo_s_asteroids] as @a[tag=todo_s_asteroids] at @e[tag=task_weapon_aster] rotated as @e[tag=task_weapon_aster] run function amogus:tasks/particles/default
 
+# task list display
+execute as @a[tag=crewmate,tag=ingame,tag=!task_cardswipe,tag=!task_course,tag=!task_distributor,tag=!task_divertpow,tag=!task_download,tag=!task_engine,tag=!task_filter,tag=!task_refueling,tag=!task_fuel1,tag=!task_fuel2,tag=!task_garbage,tag=!task_low_eng,tag=!task_manifolds,tag=!task_scan,tag=!task_shields,tag=!task_simon,tag=!task_steering,tag=!task_wires,tag=!anim_fuse] unless entity @s[tag=task_samples,scores={samples_time=56..60}] run function amogus:tasks/display
 # TASKS #
 
 # MONITORING #
@@ -193,7 +195,8 @@ execute if entity @a[tag=ingame] unless entity @a[scores={tasks_left=1..}] run f
 execute store result score ALL alive if entity @a[tag=ingame,tag=color_picked,tag=!dead]
 execute store result score IMPOSTORS alive if entity @a[tag=ingame,tag=color_picked,tag=impostor,tag=!dead]
 execute store result score CREWMATES alive if entity @a[tag=ingame,tag=color_picked,tag=crewmate,tag=!dead]
-execute if score IMPOSTORS matches matches 0 run function amogus:game/end/crewmates
-execute if score IMPOSTORS matches matches 2 if score ALL alive matches ..4 run function amogus:game/end/impostors
-execute if score IMPOSTORS matches matches 1 if score ALL alive matches ..2 run function amogus:game/end/impostors
+execute if score IMPOSTORS matches matches 2 run function amogus:game/end/crewmates
+execute if score IMPOSTORS matches matches 2 if score ALL alive matches 4 run function amogus:game/end/impostors
+execute if score IMPOSTORS matches matches 1 if score ALL alive matches 2 run function amogus:game/end/impostors
+##################### ATTENTION NOMBRES CI DESSUS A CHANGER #################################
 # END OF GAME #

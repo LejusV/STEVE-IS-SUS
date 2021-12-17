@@ -20,8 +20,8 @@ execute if entity @a[tag=color_picked,gamemode=adventure,tag=ingame] run functio
 scoreboard players add Anouncements amogus_timer 1
 execute unless entity @a[tag=impostor] if score #TEMP color_picked_nb matches ..3 run title @a[tag=color_picked] actionbar ["",{"text":"[","bold":true,"color":"dark_red"},{"score":{"name":"#TEMP","objective":"color_picked_nb"},"bold":true,"color":"red"},{"text":"/12] Players Ready","bold":true,"color":"dark_red"}]
 execute unless entity @a[tag=impostor] if score #TEMP color_picked_nb matches 4.. run title @a[tag=color_picked] actionbar ["",{"text":"[","bold":true,"color":"dark_green"},{"score":{"name":"#TEMP","objective":"color_picked_nb"},"bold":true,"color":"green"},{"text":"/12] Players Ready","bold":true,"color":"dark_green"}]
-execute if score Anouncements amogus_timer matches 1200 run tellraw @a[tag=!en] [{"text":"[IMPORTANT] ","color":"dark_red","bold":true},{"text":"Pensez à activer vos particules dans les paramètres vidéos car c'est indispensable pour jouer !","color":"red"}]
-execute if score Anouncements amogus_timer matches 1200 run tellraw @a[tag=en] [{"text":"[WARNING] ","color":"dark_red","bold":true},{"text":"Don't forget to turn all particles on in your video settings so you can play !","color":"red"}]
+execute if score Anouncements amogus_timer matches 1200 run tellraw @a[tag=!ingame,tag=!en] [{"text":"[IMPORTANT] ","color":"dark_red","bold":true},{"text":"Pensez à activer vos particules dans les paramètres vidéos car c'est indispensable pour jouer !","color":"red"}]
+execute if score Anouncements amogus_timer matches 1200 run tellraw @a[tag=!ingame,tag=en] [{"text":"[WARNING] ","color":"dark_red","bold":true},{"text":"Don't forget to turn all particles on in your video settings so you can play !","color":"red"}]
 execute if score Anouncements amogus_timer matches 1200 run scoreboard players set Anouncements amogus_timer 0
 
 

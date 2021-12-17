@@ -73,4 +73,5 @@ execute if entity @s[team=yellow] run tag @e[tag=yellow_wire_4] remove yellow_wi
 
 scoreboard players remove @s wires_stage 1
 execute if score @s wires_stage matches 0 run tag @s remove todo_c_wires
+execute if score @s wires_stage matches 0 run scoreboard players remove @s tasks_left 1
 tag @s remove temp_wires_loc

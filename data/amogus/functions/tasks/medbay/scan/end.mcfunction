@@ -7,3 +7,4 @@ tag @s remove task_scan
 tag @s remove todo_l_scan
 effect clear @s slowness
 effect give @s slowness 1 255 true
+scoreboard players remove @s tasks_left 1
