@@ -171,6 +171,10 @@ execute if entity @a[tag=anim_fuse,tag=!dead] run effect give @a[tag=anim_fuse,t
 
 
 # MEETING #
+scoreboard players operation TASK_BAR color_picked_nb = TASK_BAR_MAX color_picked_nb
+execute as @a[tag=ingame,tag=crewmate] run scoreboard players operation TASK_BAR color_picked_nb -= @s tasks_left
+execute store result bossbar task_bar value run scoreboard players get TASK_BAR color_picked_nb
+bossbar set task_bar players @a[tag=inmeeting,tag=!notinmeeting]
 execute if score MEETING_CD_SEC amogus_timer matches 1.. run function amogus:meeting/cd
 execute if entity @a[tag=inmeeting,tag=color_picked,tag=discussing] run scoreboard players add Discussion amogus_timer 1
 execute if entity @a[tag=discussing] if score Discussion amogus_meeting matches 0 run tag @a[tag=inmeeting,tag=color_picked,tag=discussing] add voting

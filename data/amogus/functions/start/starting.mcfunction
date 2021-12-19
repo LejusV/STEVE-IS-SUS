@@ -122,3 +122,7 @@ execute if entity @a[tag=sus2,team=yellow] run scoreboard objectives setdisplay 
 scoreboard players set MEETING_CD_SEC amogus_timer 20
 execute if entity @a[tag=color_picked,tag=!crewmate,tag=!impostor,gamemode=adventure] run function amogus:start/start_error
 effect give @a regeneration 5 255 true
+scoreboard players set TASK_BAR color_picked_nb 0
+execute as @a[tag=ingame,tag=crewmate] run scoreboard players operation TASK_BAR_MAX color_picked_nb += @s tasks_left
+execute store result bossbar task_bar max run scoreboard players get TASK_BAR_MAX color_picked_nb
+bossbar set task_bar value 0

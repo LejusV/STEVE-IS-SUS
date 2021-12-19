@@ -48,6 +48,12 @@ bossbar add minecraft:door_storage_cd ["",{"text":"Sabotage Cooldown : ","bold":
 bossbar set door_storage_cd color white
 bossbar set door_storage_cd max 3
 bossbar set door_storage_cd max 30
+bossbar remove minecraft:task_bar
+bossbar add minecraft:task_bar {"text":"TASK BAR","bold":true,"color":"gold"}
+bossbar set task_bar color yellow
+bossbar set task_bar max 100
+bossbar set task_bar style notched_6
+
 
 scoreboard objectives remove color_picked_nb
 scoreboard objectives remove amogus_settings
@@ -297,23 +303,23 @@ team remove white
 team remove yellow
 
 scoreboard objectives setdisplay sidebar amogus_settings
-scoreboard players set Impostors: amogus_settings 2
+scoreboard players set Impostors: amogus_settings 1
 scoreboard players set KillCooldown: amogus_settings 25
-scoreboard players set Voting amogus_settings 45
+scoreboard players set Voting amogus_settings 60
 scoreboard players set vent_weapon amogus_timer 0
 team add voting
 team modify voting suffix " Time :"
 team join voting Voting
-scoreboard players set Discussion amogus_settings 45
+scoreboard players set Discussion amogus_settings 25
 team join voting Discussion
 team add tasks
 team modify tasks suffix " Tasks :"
 team join tasks Long
-scoreboard players set Long amogus_settings 2
+scoreboard players set Long amogus_settings 3
 team join tasks Common
-scoreboard players set Common amogus_settings 2
+scoreboard players set Common amogus_settings 1
 team join tasks Short
-scoreboard players set Short amogus_settings 3
+scoreboard players set Short amogus_settings 4
 scoreboard players set Discussion amogus_timer 0
 scoreboard players set Voting amogus_timer 0
 scoreboard players operation Discussion amogus_meeting = Discussion amogus_settings
@@ -699,6 +705,15 @@ summon minecraft:villager 57.0 27.0 107.0 {Tags:[click_villager_yellow,click_vil
 
 # o2_air_vent
 execute positioned 60.5 101.00 57.5 run function amogus:structures/as_o2_airvent
+# spawn
+fill 68 27 74 68 40 75 minecraft:acacia_trapdoor[facing=west,half=top,open=true]
+fill 69 27 76 70 40 76 minecraft:acacia_trapdoor[facing=south,half=top,open=true]
+fill 71 27 75 71 40 75 minecraft:acacia_trapdoor[facing=east,half=top,open=true]
+fill 69 40 73 69 27 73 minecraft:acacia_trapdoor[facing=north,half=top,open=true]
+fill 59 27 100 59 27 100 minecraft:crimson_trapdoor[facing=north,half=bottom,open=true]
+fill 59 27 103 59 27 103 minecraft:crimson_trapdoor[facing=south,half=bottom,open=true]
+fill 60 27 102 60 30 101 minecraft:crimson_trapdoor[facing=east,half=top,open=true]
+fill 58 27 102 58 30 101 minecraft:crimson_trapdoor[facing=west,half=top,open=true]
 fill 46 27 79 46 28 76 minecraft:air
 fill 49 27 76 52 28 76 minecraft:air
 fill 55 27 76 58 28 76 minecraft:air
@@ -717,3 +732,4 @@ scoreboard players set @a death 0
 summon minecraft:villager 56.5 27.00 88.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:[click_villager_start]}
 tellraw @a "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 tp @a 56.5 27.00 88.5 0 90
+effect clear @a

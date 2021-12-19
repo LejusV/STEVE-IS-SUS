@@ -20,9 +20,9 @@ execute if entity @s[tag=todo_l_garbage,scores={garbage_stage=3}] at @e[tag=task
 execute if entity @s[tag=todo_l_engine,scores={engine_stage=1}] at @e[tag=task_up_eng,type=villager] anchored eyes if entity @s[distance=..0.3] run function amogus:tasks/upper_engine/engine
 execute if entity @s[tag=todo_l_engine,scores={engine_stage=2}] at @e[tag=task_low_eng,type=villager] anchored eyes if entity @s[distance=..0.3] run function amogus:tasks/upper_engine/engine
 
-execute if entity @s[tag=todo_l_fuel,tag=task_fuel,scores={fuel_stage=1}] if entity @e[tag=task_upeng_fuel,type=villager] anchored eyes if entity @s[distance=..0.3] run function amogus:tasks/upper_engine/fuel
-execute if entity @s[tag=todo_l_fuel,tag=task_fuel,scores={fuel_stage=2}] if entity @e[tag=task_loweng_fuel,type=villager] anchored eyes if entity @s[distance=..0.3] run function amogus:tasks/upper_engine/fuel
-execute if entity @s[tag=todo_l_fuel,tag=task_refuel,scores={fuel_stage=1..2}] if entity @e[tag=task_storage_fuel,type=villager] anchored eyes if entity @s[distance=..0.3] run function amogus:tasks/storage/fuel
+execute if entity @s[tag=todo_l_fuel,tag=task_fuel,scores={fuel_stage=1}] at @e[tag=task_upeng_fuel,type=villager] anchored eyes if entity @s[distance=..0.3] run function amogus:tasks/upper_engine/fuel
+execute if entity @s[tag=todo_l_fuel,tag=task_fuel,scores={fuel_stage=2}] at @e[tag=task_loweng_fuel,type=villager] anchored eyes if entity @s[distance=..0.3] run function amogus:tasks/upper_engine/fuel
+execute if entity @s[tag=todo_l_fuel,tag=task_refuel,scores={fuel_stage=1..2}] at @e[tag=task_storage_fuel,type=villager] anchored eyes if entity @s[distance=..0.3] run function amogus:tasks/storage/fuel
 
 execute if entity @s[tag=todo_l_reactor,tag=!task_simon] run function amogus:tasks/reactor/simon/end
 
