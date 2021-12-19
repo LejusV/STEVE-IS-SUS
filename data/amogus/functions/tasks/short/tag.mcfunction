@@ -14,8 +14,6 @@ scoreboard players add @a[scores={short_task=7},tag=todo_s_steering] short_task 
 tag @a[scores={short_task=7},tag=!todo_s_steering] add todo_s_steering
 scoreboard players add @a[scores={short_task=8},tag=todo_s_manifolds] short_task 1
 tag @a[scores={short_task=8},tag=!todo_s_manifolds] add todo_s_manifolds
-execute as @a[scores={short_task=..8}] run scoreboard players set @s short_task 0
 execute as @a[scores={short_task=9},tag=todo_s_download] run function amogus:tasks/short/assign
 tag @a[scores={short_task=9},tag=!todo_s_download] add todo_s_download
 scoreboard players set @a short_task 0
-scoreboard players add @a[tag=crewmate] tasks_left 1

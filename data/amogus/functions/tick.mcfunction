@@ -1,3 +1,8 @@
+execute unless entity @a[tag=lead] run tag @r[tag=!lead] add lead
+execute if entity @a[gamemode=adventure] as @a[gamemode=adventure] run attribute @s minecraft:generic.attack_damage base set 0
+scoreboard players enable @a[tag=lead] start
+tellraw @a[tag=lead,tag=!ingame] ["",{"text":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYou are the party owner !","bold":true,"color":"gold"},{"text":"\n\n"},{"text":"You obtained the power to start the game\nwhenever EVERYONE is ready.","italic":true,"color":"gray"},{"text":"\n\n \u0020 \u0020 \u0020 \u0020 \u0020 \u0020"},{"text":"[ START ]","bold":true,"color":"dark_red","clickEvent":{"action":"run_command","value":"/trigger start set 1"}}]
+execute if entity @a[tag=lead,scores={start=1}] run function amogus:start/start_click
 execute if entity @a[scores={sneak=1..}] as @a[scores={sneak=1..},gamemode=adventure] at @s if block ~ ~-1 ~ crimson_nylium run tp @s ~ ~-4 ~
 execute if entity @a[scores={sneak=1..}] as @a[scores={sneak=1..}] run scoreboard players set @s sneak 0
 execute if entity @a[x=56,y=24.8,z=88,dx=0,dy=0,dz=0] as @a[x=56,y=24.8,z=88,dx=0,dy=0,dz=0] at @s run tp @s 56.5 26.1 88.5
@@ -16,7 +21,7 @@ execute unless entity @a[team=purple] run item replace entity @e[tag=as_purple,l
 execute unless entity @a[team=redsus] run item replace entity @e[tag=as_redsus,limit=1] armor.head with air
 execute unless entity @a[team=white] run item replace entity @e[tag=as_white,limit=1] armor.head with air
 execute unless entity @a[team=yellow] run item replace entity @e[tag=as_yellow,limit=1] armor.head with air
-execute if entity @a[tag=color_picked,gamemode=adventure,tag=ingame] run function amogus:game
+execute if entity @a[tag=color_picked,tag=ingame] run function amogus:game
 scoreboard players add Anouncements amogus_timer 1
 execute unless entity @a[tag=impostor] if score #TEMP color_picked_nb matches ..3 run title @a[tag=color_picked] actionbar ["",{"text":"[","bold":true,"color":"dark_red"},{"score":{"name":"#TEMP","objective":"color_picked_nb"},"bold":true,"color":"red"},{"text":"/12] Players Ready","bold":true,"color":"dark_red"}]
 execute unless entity @a[tag=impostor] if score #TEMP color_picked_nb matches 4.. run title @a[tag=color_picked] actionbar ["",{"text":"[","bold":true,"color":"dark_green"},{"score":{"name":"#TEMP","objective":"color_picked_nb"},"bold":true,"color":"green"},{"text":"/12] Players Ready","bold":true,"color":"dark_green"}]

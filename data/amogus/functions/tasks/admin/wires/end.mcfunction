@@ -1,4 +1,3 @@
-tag @s remove task_wires
 scoreboard players set @s wires_loc_temp 0
 function amogus:tasks/end
 scoreboard players set @s wire_1 0
@@ -10,6 +9,7 @@ scoreboard players set @s wire_blue 0
 scoreboard players set @s wire_yellow 0
 scoreboard players set @s wire_pink 0
 scoreboard players set @e[scores={wire_temp=1..}] wire_temp 0
+tag @s remove temp_wires_loc
 execute if entity @s[team=aqua] run tag @e[tag=aqua_wire_1] remove aqua_wire_1
 execute if entity @s[team=aqua] run tag @e[tag=aqua_wire_2] remove aqua_wire_2
 execute if entity @s[team=aqua] run tag @e[tag=aqua_wire_3] remove aqua_wire_3
@@ -75,3 +75,4 @@ scoreboard players remove @s wires_stage 1
 execute if score @s wires_stage matches 0 run tag @s remove todo_c_wires
 execute if score @s wires_stage matches 0 run scoreboard players remove @s tasks_left 1
 tag @s remove temp_wires_loc
+tag @s remove task_wires

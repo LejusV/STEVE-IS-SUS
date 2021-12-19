@@ -1,20 +1,30 @@
-execute if score Impostors: amogus_settings matches 1 if score #TEMP color_picked_nb matches 3.. run function amogus:start/start_1sus 
-execute if score Impostors: amogus_settings matches 2 if score #TEMP color_picked_nb matches 3.. run function amogus:start/start_2sus 
+execute if score Impostors: amogus_settings matches 1 if score #TEMP color_picked_nb matches 4.. run function amogus:start/start_1sus 
+execute if score Impostors: amogus_settings matches 2 if score #TEMP color_picked_nb matches 5.. run function amogus:start/start_2sus 
 # a changer la au dessus le nb de joueurs
 fill 46 27 79 46 28 76 minecraft:iron_bars
 effect give @a[tag=color_picked,gamemode=adventure] minecraft:saturation 1 255 true
 effect give @a[tag=color_picked,gamemode=adventure] minecraft:hunger 6 255 true
 effect give @a[tag=color_picked,gamemode=adventure] slowness 6 255 true
 execute if score Long amogus_settings matches 1.. as @a[tag=crewmate,tag=color_picked] run function amogus:tasks/long/assign
+execute if score Long amogus_settings matches 1.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Long amogus_settings matches 2.. as @a[tag=crewmate,tag=color_picked] run function amogus:tasks/long/assign
+execute if score Long amogus_settings matches 2.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Long amogus_settings matches 3.. as @a[tag=crewmate,tag=color_picked] run function amogus:tasks/long/assign
+execute if score Long amogus_settings matches 3.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Common amogus_settings matches 1.. run function amogus:tasks/common/assign
+execute if score Common amogus_settings matches 1.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Common amogus_settings matches 2.. run function amogus:tasks/common/assign
+execute if score Common amogus_settings matches 2.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Short amogus_settings matches 1.. as @a[tag=crewmate,tag=color_picked] run function amogus:tasks/short/assign
+execute if score Short amogus_settings matches 1.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Short amogus_settings matches 2.. as @a[tag=crewmate,tag=color_picked] run function amogus:tasks/short/assign
+execute if score Short amogus_settings matches 2.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Short amogus_settings matches 3.. as @a[tag=crewmate,tag=color_picked] run function amogus:tasks/short/assign
+execute if score Short amogus_settings matches 3.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Short amogus_settings matches 4.. as @a[tag=crewmate,tag=color_picked] run function amogus:tasks/short/assign
+execute if score Short amogus_settings matches 4.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 execute if score Short amogus_settings matches 5.. as @a[tag=crewmate,tag=color_picked] run function amogus:tasks/short/assign
+execute if score Short amogus_settings matches 5.. run scoreboard players add @a[tag=crewmate,tag=color_picked] tasks_left 1
 
 execute if entity @a[tag=todo_s_download] as @a[tag=todo_s_download] run function amogus:tasks/download_loc/assign
 execute if entity @a[tag=todo_c_wires] as @a[tag=todo_c_wires] run function amogus:tasks/wires_loc/assign
@@ -46,8 +56,8 @@ execute at @e[type=villager,tag=click_villager_start,limit=1] run tp @r[tag=colo
 execute at @e[type=villager,tag=click_villager_start,limit=1] run tp @r[tag=color_picked,gamemode=adventure,distance=..30] @e[type=armor_stand,tag=spawn_location_5,limit=1]
 execute at @e[type=villager,tag=click_villager_start,limit=1] run tp @r[tag=color_picked,gamemode=adventure,distance=..30] @e[type=armor_stand,tag=spawn_location_11,limit=1]
 title @a times 20 80 20
-title @a[tag=impostor] subtitle {"selector":"@a[tag=impostor]"}
-title @a[tag=crewmate] subtitle {"selector":"@a[tag=crewmate]"}
+title @a[tag=impostor] subtitle {"selector":"@a[tag=impostor,tag=ingame]"}
+title @a[tag=crewmate] subtitle {"selector":"@a[tag=ingame]"}
 title @a[tag=impostor] title {"text":"Impostor","bold":true,"color":"dark_red"}
 title @a[tag=crewmate] title {"text":"Crewmate","bold":true,"color":"aqua"}
 effect give @a[tag=color_picked] blindness 5 1 true
@@ -75,10 +85,40 @@ execute as @a[tag=todo_l_garbage1] run scoreboard players set @s garbage_stage 2
 execute as @a[tag=todo_l_garbage2] run scoreboard players set @s garbage_stage 3
 execute as @a[tag=todo_l_garbage] run scoreboard players set @s garbage 0
 execute as @a[tag=todo_l_samples] run scoreboard players set @s sample_sus 0
+execute as @a[tag=todo_s_asteroids] run scoreboard players set @s meteor_loop 0
+execute as @a[tag=todo_s_asteroids] run scoreboard players set @s asteroids 0
 execute as @a[tag=todo_s_divertpow] run scoreboard players set @s divertpow 0
+execute as @a[tag=todo_s_divertpow] run scoreboard players set @s divertpowerto 0
 execute as @a[tag=todo_s_divertpow] run scoreboard players operation @s divertpowerto = @e[scores={short_task=1..8},limit=1,sort=random] short_task
 execute as @a[tag=todo_s_divertpow] run scoreboard players add @s divertpowerto 10
 execute as @a[tag=todo_l_fuel] run scoreboard players set @s fuel_stage 0
 execute as @a[tag=todo_l_fuel] run tag @s add task_refuel
 
+scoreboard players set @a amogus_vent_use 0
+execute if entity @a[tag=sus1,team=aqua] run scoreboard objectives setdisplay sidebar.team.aqua sus1_cd
+execute if entity @a[tag=sus1,team=black] run scoreboard objectives setdisplay sidebar.team.black sus1_cd
+execute if entity @a[tag=sus1,team=blue] run scoreboard objectives setdisplay sidebar.team.blue sus1_cd
+execute if entity @a[tag=sus1,team=gray] run scoreboard objectives setdisplay sidebar.team.gray sus1_cd
+execute if entity @a[tag=sus1,team=green] run scoreboard objectives setdisplay sidebar.team.dark_green sus1_cd
+execute if entity @a[tag=sus1,team=lime] run scoreboard objectives setdisplay sidebar.team.green sus1_cd
+execute if entity @a[tag=sus1,team=orange] run scoreboard objectives setdisplay sidebar.team.gold sus1_cd
+execute if entity @a[tag=sus1,team=pink] run scoreboard objectives setdisplay sidebar.team.light_purple sus1_cd
+execute if entity @a[tag=sus1,team=purple] run scoreboard objectives setdisplay sidebar.team.dark_purple sus1_cd
+execute if entity @a[tag=sus1,team=redsus] run scoreboard objectives setdisplay sidebar.team.dark_red sus1_cd
+execute if entity @a[tag=sus1,team=white] run scoreboard objectives setdisplay sidebar.team.white sus1_cd
+execute if entity @a[tag=sus1,team=yellow] run scoreboard objectives setdisplay sidebar.team.yellow sus1_cd
+execute if entity @a[tag=sus2,team=aqua] run scoreboard objectives setdisplay sidebar.team.aqua sus2_cd
+execute if entity @a[tag=sus2,team=black] run scoreboard objectives setdisplay sidebar.team.black sus2_cd
+execute if entity @a[tag=sus2,team=blue] run scoreboard objectives setdisplay sidebar.team.blue sus2_cd
+execute if entity @a[tag=sus2,team=gray] run scoreboard objectives setdisplay sidebar.team.gray sus2_cd
+execute if entity @a[tag=sus2,team=green] run scoreboard objectives setdisplay sidebar.team.dark_green sus2_cd
+execute if entity @a[tag=sus2,team=lime] run scoreboard objectives setdisplay sidebar.team.green sus2_cd
+execute if entity @a[tag=sus2,team=orange] run scoreboard objectives setdisplay sidebar.team.gold sus2_cd
+execute if entity @a[tag=sus2,team=pink] run scoreboard objectives setdisplay sidebar.team.light_purple sus2_cd
+execute if entity @a[tag=sus2,team=purple] run scoreboard objectives setdisplay sidebar.team.dark_purple sus2_cd
+execute if entity @a[tag=sus2,team=redsus] run scoreboard objectives setdisplay sidebar.team.dark_red sus2_cd
+execute if entity @a[tag=sus2,team=white] run scoreboard objectives setdisplay sidebar.team.white sus2_cd
+execute if entity @a[tag=sus2,team=yellow] run scoreboard objectives setdisplay sidebar.team.yellow sus2_cd
+scoreboard players set MEETING_CD_SEC amogus_timer 20
 execute if entity @a[tag=color_picked,tag=!crewmate,tag=!impostor,gamemode=adventure] run function amogus:start/start_error
+effect give @a regeneration 5 255 true

@@ -1,3 +1,4 @@
+scoreboard players set @s amogus_timer 0
 advancement revoke @s only amogus:tasks/storage/garbage
 advancement revoke @s only amogus:tasks/cafeteria/garbage
 advancement revoke @s only amogus:tasks/o2/garbage

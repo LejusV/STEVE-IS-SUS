@@ -10,8 +10,6 @@ scoreboard players add @a[scores={long_task=5},tag=todo_l_samples] long_task 1
 tag @a[scores={long_task=5},tag=!todo_l_samples] add todo_l_samples
 scoreboard players add @a[scores={long_task=6},tag=todo_l_garbage2] long_task 1
 tag @a[scores={long_task=6},tag=!todo_l_garbage2] add todo_l_garbage2
-execute as @a[scores={long_task=..6}] run scoreboard players set @s long_task 0
 execute as @a[scores={long_task=7},tag=todo_l_fuel] run function amogus:tasks/long/assign
 tag @a[scores={long_task=7},tag=!todo_l_fuel] add todo_l_fuel
 scoreboard players set @a long_task 0
-scoreboard players add @a[tag=crewmate] tasks_left 1

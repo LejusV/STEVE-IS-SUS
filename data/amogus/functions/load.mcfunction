@@ -1,6 +1,5 @@
 tellraw @a {"text": "§8§l > §6§lAMOGUS §8§l< §7Datapack (re)loaded !"}
-tp @a 56.5 27.00 88.5 0 90
-gamemode adventure @a[name=!"LejusVDP",tag=!developer]
+gamemode adventure @a
 advancement revoke @a everything
 
 bossbar remove minecraft:kill_cd_1
@@ -149,6 +148,9 @@ scoreboard objectives remove simon_loop
 
 scoreboard objectives remove card_loop
 
+scoreboard objectives remove asteroids
+scoreboard objectives remove meteor_loop
+
 scoreboard objectives remove filter_count
 scoreboard objectives remove filtered
 
@@ -156,6 +158,8 @@ scoreboard objectives remove tasks_left
 scoreboard objectives remove alive
 
 scoreboard objectives remove sneak
+
+scoreboard objectives remove start
 
 scoreboard objectives add color_picked_nb dummy
 scoreboard objectives add amogus_settings dummy "SETTINGS"
@@ -263,6 +267,9 @@ scoreboard objectives add card_2 dummy
 scoreboard objectives add card_3 dummy
 scoreboard objectives add card_4 dummy
 
+scoreboard objectives add asteroids dummy
+scoreboard objectives add meteor_loop dummy
+
 scoreboard objectives add filter_count dummy
 scoreboard objectives add filtered dummy
 
@@ -270,6 +277,8 @@ scoreboard objectives add tasks_left dummy
 scoreboard objectives add alive dummy
 
 scoreboard objectives add sneak minecraft.custom:minecraft.sneak_time
+
+scoreboard objectives add start trigger
 
 team remove aqua
 team remove black
@@ -314,8 +323,8 @@ scoreboard players set @a voted 0
 scoreboard players set @a amogus_vote 0
 scoreboard players set @a amogus_Vvalid 0
 scoreboard players set skip voted 0
-scoreboard players set ` sus1_cd 1
-scoreboard players set ` sus2_cd 1
+scoreboard players set ` sus1_cd 999999
+scoreboard players set ` sus2_cd 999999
 scoreboard players set 1000 amogus_timer 1000
 scoreboard players set 1 color_picked_nb 1
 scoreboard players set 2 color_picked_nb 2
@@ -416,6 +425,7 @@ tag @a remove sus2
 tag @a remove kill_cd
 tag @a remove dead
 tag @a remove inmeeting
+tag @e remove not_ejected
 tag @a remove meeting_0
 tag @a remove meeting_1
 tag @a remove meeting_2
@@ -493,6 +503,7 @@ tag @a remove task_steering
 tag @a remove task_wires
 tag @a remove anim_fuse
 tag @a remove cam_player
+tag @a remove lead
 
 tag @e remove aqua_wire_1
 tag @e remove aqua_wire_2
@@ -542,11 +553,6 @@ tag @e remove yellow_wire_1
 tag @e remove yellow_wire_2
 tag @e remove yellow_wire_3
 tag @e remove yellow_wire_4
-tag @a remove task_wires
-tag @a remove task_garbage
-tag @a remove task_shields
-tag @a remove task_course
-tag @a remove task_engine
 tag @e remove manifol_1
 tag @e remove manifol_2
 tag @e remove manifol_3
@@ -579,6 +585,15 @@ kill @e[tag=meteorite]
 
 kill @e[tag=as_color]
 kill @e[tag=click_villager]
+
+kill @e[tag=click_villager_start]
+kill @e[tag=body]
+
+team add door
+team modify door suffix " DOOR :"
+team join door UPPER_ENGINE
+team join door LOWER_ENGINE
+team join door CAFETERIA
 
 team add redsus "RED"
 team add orange "ORANGE"
@@ -696,3 +711,9 @@ fill 68 27 103 67 28 103 minecraft:air
 fill 67 27 104 67 28 103 minecraft:air
 fill 64 27 105 61 28 105 minecraft:air
 fill 58 27 105 55 28 105 minecraft:air
+schedule clear amogus:meeting/kill
+schedule clear amogus:meeting/end
+scoreboard players set @a death 0
+summon minecraft:villager 56.5 27.00 88.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:[click_villager_start]}
+tellraw @a "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+tp @a 56.5 27.00 88.5 0 90

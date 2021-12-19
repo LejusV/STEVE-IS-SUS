@@ -15,5 +15,29 @@ execute if entity @s[scores={death=1},team=pink] at @s[scores={death=1},team=pin
 execute if entity @s[scores={death=1},team=purple] at @s[scores={death=1},team=purple] run summon armor_stand ~ ~-1.2 ~ {Invulnerable:1b,Tags:["body"],NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{},{},{id:"leather_chestplate",Count:1b,tag:{display:{color:7288776}}},{id:"player_head",Count:1b,tag:{display:{Name:'{"text":"Mini Crewmate (purple)"}'},SkullOwner:{Id:[I;640240899,778325752,-1536767329,-1015090256],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmE4ZWNjM2IzNmU5OWExNmY3NTgyMjA3ZGRkMzc1NjA4NGMwMmIwZmIwYjBhMTllNGQzYThkMjA2NzQwN2Y3ZSJ9fX0="}]}}}},{}],HandItems:[{},{}],Pose:{Body:[90f,0f,0f],Head:[102f,0f,180f],LeftArm:[100f,0f,0f],RightArm:[102f,0f,0f]},DisabledSlots:4144959}
 execute if entity @s[scores={death=1},team=white] at @s[scores={death=1},team=white] run summon armor_stand ~ ~-1.2 ~ {Invulnerable:1b,Tags:["body"],NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{},{},{id:"leather_chestplate",Count:1b,tag:{display:{color:16777215}}},{id:"player_head",Count:1b,tag:{display:{Name:'{"text":"Mini Crewmate (white)"}'},SkullOwner:{Id:[I;1904482835,881279197,-1692813976,627979781],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjI0ZGFhODQ5ZmZkMmVlODc4MjkzNDljNzQzNDY1MzIxNTRhOTU3MmVhZTBkZmVkMmJiMjgzMWYxYmQwOTdiIn19fQ=="}]}}}},{}],HandItems:[{},{}],Pose:{Body:[90f,0f,0f],Head:[102f,0f,180f],LeftArm:[100f,0f,0f],RightArm:[102f,0f,0f]},DisabledSlots:4144959}
 execute if entity @s[scores={death=1},team=yellow] at @s[scores={death=1},team=yellow] run summon armor_stand ~ ~-1.2 ~ {Invulnerable:1b,Tags:["body"],NoBasePlate:1b,NoGravity:1b,ShowArms:1b,ArmorItems:[{},{},{id:"leather_chestplate",Count:1b,tag:{display:{color:16776770}}},{id:"player_head",Count:1b,tag:{display:{Name:'{"text":"Mini Crewmate (yellow)"}'},SkullOwner:{Id:[I;-178225859,-1537978554,-1462670108,49632637],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmQ0NjczOGU2Y2VkYTY1MmU5ZTdiNzYxNzcwY2ZkMGE4Y2FkZDU1NGNmODdmMjAyZDFlMWU4N2U3YWYyZWRiYyJ9fX0="}]}}}},{}],HandItems:[{},{}],Pose:{Body:[90f,0f,0f],Head:[102f,0f,180f],LeftArm:[100f,0f,0f],RightArm:[102f,0f,0f]},DisabledSlots:4144959}
-execute as @s[scores={death=1}] run scoreboard players set @s death 0
 execute if entity @e[tag=report_body] as @e[tag=report_body] at @s run tp @s ~ ~15 ~
+effect clear @e[tag=report_body] invisibility
+tag @s remove task_asteroids
+tag @s remove task_cardswipe
+tag @s remove task_course
+tag @s remove task_distributor
+tag @s remove task_divertpow
+tag @s remove task_download
+tag @s remove task_engine
+tag @s remove task_filter
+tag @s remove task_fuel1
+tag @s remove task_fuel2
+tag @s remove task_garbage
+tag @s remove task_manifolds
+tag @s remove task_refueling
+tag @s remove task_refuel
+tag @s remove task_fuel
+tag @s remove task_samples
+tag @s remove task_scan
+tag @s remove task_shields
+tag @s remove task_simon
+tag @s remove task_steering
+tag @s remove task_wires
+tag @s remove anim_fuse
+tag @s remove cam_player
+execute as @s[scores={death=1}] run scoreboard players set @s death 0
