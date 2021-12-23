@@ -1,7 +1,7 @@
-tellraw @a {"text": "§8§l > §6§lAMOGUS §8§l< §7Datapack (re)loaded !"}
 gamemode adventure @a
 advancement revoke @a everything
 
+# BOSSBAR RESET #
 bossbar remove minecraft:kill_cd_1
 bossbar add minecraft:kill_cd_1 ["",{"text":"Kill Cooldown : ","bold":true,"color":"dark_red"},{"score":{"name":"@a[tag=sus1,tag=impostor,limit=1]","objective":"kill_cd_1"},"bold":true,"color":"dark_red"}]
 bossbar remove minecraft:kill_cd_2
@@ -54,7 +54,7 @@ bossbar set task_bar color yellow
 bossbar set task_bar max 100
 bossbar set task_bar style notched_6
 
-
+# SCOREBOARD #
 scoreboard objectives remove color_picked_nb
 scoreboard objectives remove amogus_settings
 scoreboard objectives remove amogus_timer
@@ -286,6 +286,7 @@ scoreboard objectives add sneak minecraft.custom:minecraft.sneak_time
 
 scoreboard objectives add start trigger
 
+# TEAM REMOVE #
 team remove aqua
 team remove black
 team remove blue
@@ -302,24 +303,28 @@ team remove voting
 team remove white
 team remove yellow
 
+# DEFAULT SETTINGS #
 scoreboard objectives setdisplay sidebar amogus_settings
 scoreboard players set Impostors: amogus_settings 1
 scoreboard players set KillCooldown: amogus_settings 25
+scoreboard players set Discussion amogus_settings 25
 scoreboard players set Voting amogus_settings 60
-scoreboard players set vent_weapon amogus_timer 0
+scoreboard players set Long amogus_settings 3
+scoreboard players set Common amogus_settings 1
+scoreboard players set Short amogus_settings 4
+
+# SIDEBAR SUFFIX #
 team add voting
 team modify voting suffix " Time :"
 team join voting Voting
-scoreboard players set Discussion amogus_settings 25
 team join voting Discussion
 team add tasks
 team modify tasks suffix " Tasks :"
 team join tasks Long
-scoreboard players set Long amogus_settings 3
 team join tasks Common
-scoreboard players set Common amogus_settings 1
 team join tasks Short
-scoreboard players set Short amogus_settings 4
+
+# MEETING #
 scoreboard players set Discussion amogus_timer 0
 scoreboard players set Voting amogus_timer 0
 scoreboard players operation Discussion amogus_meeting = Discussion amogus_settings
@@ -329,6 +334,8 @@ scoreboard players set @a voted 0
 scoreboard players set @a amogus_vote 0
 scoreboard players set @a amogus_Vvalid 0
 scoreboard players set skip voted 0
+
+# CONSTANTS & RESET #
 scoreboard players set ` sus1_cd 999999
 scoreboard players set ` sus2_cd 999999
 scoreboard players set 1000 amogus_timer 1000
@@ -372,6 +379,7 @@ scoreboard players set door_elec_cd_sec amogus_timer 0
 scoreboard players set door_storage_cd amogus_timer 0
 scoreboard players set door_storage_cd_sec amogus_timer 0
 
+# ASSIGN TASK NUMBERS TO ARMOR STANDS #
 scoreboard players set @e[name="long_1"] long_task 1
 scoreboard players set @e[name="long_2"] long_task 2
 scoreboard players set @e[name="long_3"] long_task 3
@@ -392,6 +400,7 @@ scoreboard players set @e[name="short_8"] short_task 8
 scoreboard players set @e[name="short_9"] short_task 9
 scoreboard players set @e[name="short_0"] short_task 0
 
+# DOWNLOAD ASSIGN TASK NUMBERS TO ARMOR STANDS #
 scoreboard players reset @e download_stage
 scoreboard players set @e[name="download_1"] download_stage 2
 scoreboard players set @e[name="download_2"] download_stage 3
@@ -399,6 +408,7 @@ scoreboard players set @e[name="download_3"] download_stage 4
 scoreboard players set @e[name="download_4"] download_stage 5
 scoreboard players set @e[name="download_5"] download_stage 6
 
+# WIRES RESET & ASSIGN WIRES NUMBERS TO ARMOR STANDS #
 scoreboard players set @a wires_stage 0
 scoreboard players set @a wires_loc_temp 0
 scoreboard players set @a wires_loc 0
@@ -409,9 +419,11 @@ scoreboard players set @e[name="×─"] wire 2
 scoreboard players set @e[name="○─"] wire 3
 scoreboard players set @e[name="☆─"] wire 4
 
+# MANIFOLDS #
 scoreboard players set @e[scores={manifol=1..10}] manifol_click 0
 scoreboard players set @a[scores={manifol=1..10}] manifol 0
 
+# SIMON #
 scoreboard players set @e[tag=simon_1] simon 1
 scoreboard players set @e[tag=simon_2] simon 2
 scoreboard players set @e[tag=simon_3] simon 3
@@ -422,6 +434,8 @@ scoreboard players set @e[tag=simon_7] simon 7
 scoreboard players set @e[tag=simon_8] simon 8
 scoreboard players set @e[tag=simon_9] simon 9
 
+
+# TAG CLEAR #
 tag @a remove color_picked
 tag @a remove ingame
 tag @a remove impostor
@@ -569,6 +583,7 @@ tag @e remove manifol_7
 tag @e remove manifol_8
 tag @e remove manifol_9
 
+# KILL TASK ARMOR STANDS #
 kill @e[tag=steer_target_set]
 kill @e[tag=aqua_steer_target]
 kill @e[tag=black_steer_target]
@@ -595,12 +610,15 @@ kill @e[tag=click_villager]
 kill @e[tag=click_villager_start]
 kill @e[tag=body]
 
+
+# DOOR SABOTAGES #
 team add door
 team modify door suffix " DOOR :"
 team join door UPPER_ENGINE
 team join door LOWER_ENGINE
 team join door CAFETERIA
 
+# COLORS TEAM SETUP #
 team add redsus "RED"
 team add orange "ORANGE"
 team add yellow "YELLOW"
@@ -678,6 +696,7 @@ team modify gray seeFriendlyInvisibles false
 team join IA @e[type=villager]
 
 
+# ARMOR STANDS & VILLAGER TO PICK A COLOR #
 summon armor_stand 45.0 39.0 78.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:2424829}}},{id:"leather_leggings",Count:1b,tag:{display:{color:2424829}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:2424829}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[-90f],Tags:[as_aqua,as_color]}
 summon minecraft:villager 45.0 27.0 78.0 {Tags:[click_villager_aqua,click_villager],Rotation:[-90f],NoAI:1,Silent:1}
 summon armor_stand 51.0 39.0 75.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:2697513}}},{id:"leather_leggings",Count:1b,tag:{display:{color:2697513}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:2697513}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[0f],Tags:[as_black,as_color]}
@@ -703,6 +722,10 @@ summon minecraft:villager 63.0 27.0 107.0 {Tags:[click_villager_white,click_vill
 summon armor_stand 57.0 39.0 107.0 {Invulnerable:1b,NoBasePlate:1b,NoGravity:0b,ShowArms:1b,ArmorItems:[{id:"leather_boots",Count:1b,tag:{display:{color:16776770}}},{id:"leather_leggings",Count:1b,tag:{display:{color:16776770}}},{id:"leather_chestplate",Count:1b,tag:{display:{color:16776770}}},{}],HandItems:[{},{}],DisabledSlots:4144959,Rotation:[180f],Tags:[as_yellow,as_color]}
 summon minecraft:villager 57.0 27.0 107.0 {Tags:[click_villager_yellow,click_villager],Rotation:[180f],NoAI:1,Silent:1}
 
+summon minecraft:villager 56.5 27.00 88.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:[click_villager_start]}
+
+
+# MAP RESET #
 # o2_air_vent
 execute positioned 60.5 101.00 57.5 run function amogus:structures/as_o2_airvent
 # spawn
@@ -726,10 +749,12 @@ fill 68 27 103 67 28 103 minecraft:air
 fill 67 27 104 67 28 103 minecraft:air
 fill 64 27 105 61 28 105 minecraft:air
 fill 58 27 105 55 28 105 minecraft:air
+
+
 schedule clear amogus:meeting/kill
 schedule clear amogus:meeting/end
 scoreboard players set @a death 0
-summon minecraft:villager 56.5 27.00 88.5 {NoAI:1,Invulnerable:1,Silent:1,Tags:[click_villager_start]}
 tellraw @a "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+tellraw @a {"text": "§8§l > §6§lSTEVE IS SUS §8§l< §7Datapack Reloaded !"}
 tp @a 56.5 27.00 88.5 0 90
 effect clear @a
